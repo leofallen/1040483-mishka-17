@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Алексей Пономарев](https://up.htmlacademy.ru/adaptive/17/user/1040483).
-* Наставник: [Андрей Корейкин] (https://htmlacademy.ru/profile/ankormoreankor).
+* Наставник: [Андрей Корейкин](https://htmlacademy.ru/profile/ankormoreankor).
 
 ---
 
