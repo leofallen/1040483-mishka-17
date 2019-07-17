@@ -1,0 +1,76 @@
+.promo {
+  // width: @width-mobile;
+  &__headline {
+    font-size: 27px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0;
+  }
+  &__button {
+    display: block;
+    // min-width: @width-mobile;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #ffffff;
+    padding: 21px;
+    padding-left: 30px;
+    padding-right: 25px;
+  }
+
+  &__button--left {
+    background-color: @light-green;
+  }
+
+  &__button--right {
+    background-color: @green;
+  }
+
+  &__button-title {
+    display: inline-block;
+    width: 120px;
+    vertical-align: middle;
+  }
+
+  &__button-icon {
+    opacity: 0.2;
+  }
+
+  &__button:hover {
+    padding-top: 16px;
+    padding-bottom: 26px;
+  }
+
+  &__button--left:hover {
+    box-shadow: -5px -5px 0 5px @light-green;
+  }
+
+  &__button--right:hover {
+    box-shadow: -5px -5px 0 5px @green;
+  }
+
+  &__button-icon--left {
+    margin-right: 10px;
+  }
+
+}
+
+.promo-button-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promo-headline-wrapper {
+  background-image: url(../img/hero-mobile@1x.jpg);
+  background-position: -122px -15px;
+  background-repeat: no-repeat;
+  padding-top: 75px;
+  padding-bottom: 118px;
+}
+
+.promo-button-wrapper {
+  display: flex;
+  flex-direction: column;
+}

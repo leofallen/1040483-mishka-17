@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: @width-mobile;
+  max-width: @width-mobile;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: "OpenSans", Arial, sans-serif;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+@import "./normalize.less";
+@import "./variables.less";
+@import "./page-header.less";
+@import "./main-nav.less";
+@import "./promo.less";
+@import "./top-product.less";
+@import "./button.less";
+@import "./block-border.less";
+@import "./advantages.less";
+@import "./reviews.less";
+@import "./contacts.less";
+@import "./page-footer.less";
+@import "./social.less";
+@import "./footer-link.less";

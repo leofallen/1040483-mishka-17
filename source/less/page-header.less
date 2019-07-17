@@ -1,0 +1,30 @@
+.page-header {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  // width: @width-mobile;
+
+  &__logo {
+    margin: 22px auto;
+  }
+
+  &__toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    top: 29px;
+    right: 32px;
+    border: none;
+    background-image: url(../img/icon-menu-open.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__toggle-close {
+    background-image: url(../img/icon-menu-close.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+}
