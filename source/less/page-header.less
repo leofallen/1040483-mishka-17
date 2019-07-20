@@ -6,7 +6,6 @@
   &__logo {
     width: 86px;
     height: 35px;
-    margin: 22px auto;
   }
 
   &__toggle {
@@ -20,11 +19,41 @@
     background-image: url("../img/icon-menu-open.svg");
     background-position: center;
     background-repeat: no-repeat;
+    background-color: transparent;
   }
 
   &__toggle-close {
     background-image: url("../img/icon-menu-close.svg");
     background-position: center;
     background-repeat: no-repeat;
+  }
+}
+
+.page-header-logo-wrapper {
+  margin: 22px auto;
+}
+
+@media (min-width: @width-tablet) {
+  .page-header-logo-wrapper {
+    margin: 21px 51px;
+    width: 112px;
+    height: 46px;
+    background-image: url("../img/logo-tablet.svg");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+  }
+
+  .page-header {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+
+    &__logo {
+      display: none;
+    }
+
+    &__toggle {
+      display: none;
+    }
   }
 }
