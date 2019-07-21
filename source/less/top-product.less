@@ -3,6 +3,11 @@
   flex-direction: column;
   padding: 30px;
 
+  &__main {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__headline {
     margin: 0;
     padding: 0;
@@ -52,10 +57,10 @@
   }
 
   &__image {
-    margin-bottom: 29px;
     width: 100%;
     height: auto;
     min-height: 315px;
+    margin: 0 auto 29px
   }
 
   &__price {
@@ -69,5 +74,73 @@
   &__button {
     padding: 14px;
     margin-bottom: 6px;
+  }
+}
+
+@media (min-width: @width-tablet) {
+  .top-product {
+    padding: 50px;
+    &__main {
+      position: relative;
+      padding-right: 377px;
+      display: block;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    &__headline {
+      font-size: 43px;
+      line-height: 50px;
+      margin: 0;
+      margin-bottom: 5px;
+
+    }
+
+    &__sub-headline {
+      font-size: 17px;
+      line-height: 17px;
+      width: 70px;
+      text-indent: 8px;
+      margin: 0 27px 0 auto;
+      vertical-align: middle;
+    }
+
+    &__image {
+      position: absolute;
+      z-index: -1;
+      width: 333px;
+      height: 404px;
+      margin: 0;
+      right: 0;
+      top: 0;
+    }
+
+    &__description {
+      font-size: 17px;
+      line-height: 30px;
+      width: 285px;
+      margin-bottom: 40px;
+    }
+
+    &__specifications {
+      margin-bottom: 55px;
+    }
+    &__price {
+      display: block;
+      font-size: 20px;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 34px;
+    }
+
+    &__button {
+      display: block;
+      margin: 0;
+      padding: 10px;
+    }
   }
 }
