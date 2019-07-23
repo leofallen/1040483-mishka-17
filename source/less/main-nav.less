@@ -1,0 +1,30 @@
+.main-nav {
+  display: flex;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__list--none {
+    display: none;
+  }
+}
+
+.site-list__item {
+  padding: 29px 35px;
+  border-top: 1px solid @gray;
+
+  &:last-child {
+    border-bottom: 1px solid @gray;
+  }
+}
+
+.site-list__link {
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  color: black;
+  padding-left: 45px;
+}

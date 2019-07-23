@@ -1,0 +1,101 @@
+.advantages {
+  padding: 30px;
+
+  &__headline {
+    font-size: 25px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    font-size: 17px;
+    line-height: 20px;
+    padding-top: 53px;
+    margin-bottom: 28px;
+    position: relative;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__item--flower::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 37px;
+    background-image: url("../img/icon-feature-flower.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 9px;
+  }
+
+  &__item--money::before {
+    content: "";
+    position: absolute;
+    width: 47px;
+    height: 27px;
+    background-image: url("../img/icon-feature-money.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+  }
+
+  &__item--heart::before {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 27px;
+    background-image: url("../img/icon-feature-heart.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 9px;
+  }
+
+  &__item--knitting::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 34px;
+    background-image: url("../img/icon-feature-ball.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+  }
+
+  &__item--rocket::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 23px;
+    background-image: url("../img/icon-feature-rocket.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: -6px;
+  }
+
+  &__item--gift::before {
+    content: "";
+    position: absolute;
+    width: 33px;
+    height: 32px;
+    background-image: url("../img/icon-feature-gift.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 2px;
+  }
+}
