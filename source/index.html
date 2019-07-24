@@ -12,14 +12,16 @@
         <img class="page-header__logo" src="./img/logo-mobile.svg" width="86" height="35" alt="лого">
       </div>
       <button class="page-header__toggle">Меню</button>
-      <nav class="main-nav">
-        <ul class="main-nav__list main-nav__list--none site-list">
+      <nav class="main-nav main-nav--none">
+        <ul class="main-nav__list site-list site-list--tablet">
           <li class="site-list__item site-list--catalog">
-            <a class="site-list__link site-list__link--catalog" href="./catalog.html">Каталог товаров</a>
+            <a class="site-list__link site-list__link--tablet site-list__link--catalog" href="./catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item site-list--knitting">
-            <a class="site-list__link site-list__link--knitting" href="./form.html">Вязание на заказ</a>
+            <a class="site-list__link site-list__link--tablet site-list__link--knitting" href="./form.html">Вязание на заказ</a>
           </li>
+        </ul>
+        <ul class="main-nav__list site-list">
           <li class="site-list__item site-list--search">
             <a class="site-list__link site-list__link--search" href="#">Поиск по сайту</a>
           </li>
@@ -32,6 +34,17 @@
     <main class="page-main">
       <h1 class="visually-hidden">Магазин милых вещей ручной работы "Мишка"</h1>
       <section class="promo">
+        <ul class="promo__menu">
+          <li class="promo__menu-item">
+            <a class="promo__menu-link promo__menu-link--desktop" href="#">Новые поступления</a>
+          </li>
+          <li class="promo__menu-item">
+            <a class="promo__menu-link promo__menu-link--desktop" href="#">Распродажа</a>
+          </li>
+          <li class="promo__menu-item">
+            <a class="promo__menu-link promo__menu-link--tablet" href="#">Бесплатная доставка по России</a>
+          </li>
+        </ul>
         <div class="promo-headline-wrapper">
           <h2 class="promo__headline">Милые штуки<br class="promo__br"> ручной<br> работы для дома</h2>
         </div>

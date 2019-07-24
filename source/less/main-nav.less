@@ -1,15 +1,20 @@
 .main-nav {
   display: flex;
+  flex-direction: column;
 
   &__list {
-    width: 100%;
+    width: auto;
     margin: 0;
     padding: 0;
 
     list-style: none;
   }
 
-  &__list--none {
+  &__list:last-child {
+    margin-top: -1px;
+  }
+
+  &--none {
     display: none;
   }
 }
@@ -25,7 +30,7 @@
 
   &__link {
     display: block;
-    padding: 29px 35px 29px 77px;
+    .padding(29px; 35px; 29px; 77px);
 
     font-size: 17px;
     line-height: 24px;
@@ -46,7 +51,7 @@
   &--search::before {
     content: "";
     position: absolute;
-    top: 32px;
+    top: 35px;
     left: 32px;
     z-index: -1;
 
@@ -62,7 +67,7 @@
   &--basket::before {
     content: "";
     position: absolute;
-    top: 31px;
+    top: 35px;
     left: 30px;
     z-index: -1;
 
@@ -78,87 +83,51 @@
 
 @media (min-width: @width-tablet) {
   .main-nav {
+    display: flex;
     margin-left: auto;
-
-    &__list {
-      display: flex;
-    }
   }
 
+
   .site-list {
-    &__item {
-      position: relative;
-      border: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__link--search {
+      padding: 32px 41px;
+
+      font-size: 0;
+
+      border-left: 1px solid @gray;
+    }
+
+    &__link--basket {
+      .padding(32px; 52px; 32px; 82px);
+
+      border-left: 1px solid @gray;
+    }
+
+    &--tablet {
+      position: absolute;
+      left: 52px;
+      bottom: -44px;
+      z-index: 1;
+
+      max-width: 50%;
+    }
+
+    &__link--tablet {
       padding: 0;
-      text-align: center;
-      vertical-align: middle;
+      margin-right: 37px;
+
+      font-size: 15px;
+    }
+
+    &__item {
+      border: none;
     }
 
     &__item:last-child {
       border: none;
-    }
-
-    &__link {
-      padding: 0;
-    }
-
-    &__link--catalog {
-      font-size: 15px;
-    }
-
-    &__link--knitting {
-      font-size: 15px;
-    }
-
-    &--search {
-      order: -1;
-
-      width: 82px;
-
-      border-left: 1px solid @gray;
-      border-right: 1px solid @gray;
-    }
-
-    &--search::before {
-      top: 36px;
-      left: 33px;
-    }
-
-    &--basket {
-      order: -1;
-    }
-
-    &--basket::before {
-      top: 35px;
-      left: 31px;
-    }
-
-    &__link--search {
-      display: block;
-      width: 100%;
-      height: 100%;
-      padding: 0;
-
-      font-size: 0;
-    }
-
-    &__link--basket {
-      display: block;
-      padding: 32px 52px 32px 83px;
-    }
-
-    &--knitting {
-      position: absolute;
-      bottom: -44px;
-      left: 52px;
-      z-index: 1;
-    }
-
-    &--catalog {
-      position: absolute;
-      bottom: -44px;
-      left: 220px;
-      z-index: 1;
     }
   }
 }

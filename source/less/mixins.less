@@ -1,4 +1,4 @@
-.before-after(@top; @right; @bottom; @left) {
+.before-after(@top: initial; @right: initial; @bottom: initial; @left: initial;) {
   content: "";
   position: absolute;
   top: @top;
@@ -7,26 +7,26 @@
   left: @left;
 }
 
-.size(@width; @height) {
+.size(@width: initial; @height: initial;) {
   width: @width;
   height: @height;
 }
 
-.margin(@mt; @ml; @mb; @mr) {
+.margin(@mt: initial; @mr: initial; @mb: initial; @ml: initial;) {
   margin-top: @mt;
+  margin-right: @mr;
   margin-left: @ml;
   margin-bottom: @mb;
-  margin-right: @mr;
 }
 
-.padding(@pt; @pl; @pb; @pr) {
+.padding(@pt: initial; @pr: initial; @pb: initial; @pl: initial;) {
   padding-top: @pt;
-  padding-left: @pl;
-  padding-bottom: @pb;
   padding-right: @pr;
+  padding-bottom: @pb;
+  padding-left: @pl;
 }
 
-.font(@font-size; @line-height; @font-weight;) {
+.font(@font-size: initial; @line-height: initial; @font-weight: normal;) {
   font-size: @font-size;
   line-height: @line-height;
   font-weight: @font-weight;
