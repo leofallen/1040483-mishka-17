@@ -1,0 +1,33 @@
+.before-after(@top; @right; @bottom; @left) {
+  content: "";
+  position: absolute;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+}
+
+.size(@width; @height) {
+  width: @width;
+  height: @height;
+}
+
+.margin(@mt; @ml; @mb; @mr) {
+  margin-top: @mt;
+  margin-left: @ml;
+  margin-bottom: @mb;
+  margin-right: @mr;
+}
+
+.padding(@pt; @pl; @pb; @pr) {
+  padding-top: @pt;
+  padding-left: @pl;
+  padding-bottom: @pb;
+  padding-right: @pr;
+}
+
+.font(@font-size; @line-height; @font-weight;) {
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: @font-weight;
+}
