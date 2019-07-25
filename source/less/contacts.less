@@ -1,14 +1,16 @@
 .contacts {
-  &__headline {
-    margin: 30px 30px 25px 30px;
+  display: flex;
+  flex-direction: column;
 
-    font-size: 18px;
-    line-height: 30px;
+  &__headline {
+    .margin(30px; 30px; 25px; 30px);
+
+    .font(18px; 30px; bold);
   }
 
   &__address {
-    margin: 0 30px;
-    margin-bottom: 40px;
+    .margin(0; 30px; 40px; 30px);
+
     padding: 0;
 
     font-size: 15px;
@@ -42,21 +44,19 @@
   &__map {
     position: relative;
 
-    min-width: 320px;
-    min-height: 457px;
+    .size(320px; 457px);
+    margin-left: auto;
+    margin-right: auto;
 
     background-image: url("../img/map-mobile@1x.jpg");
     background-position: center;
+    background-repeat: no-repeat;
   }
 
   &__map::after {
-    content: "";
-    position: absolute;
-    left: 139px;
-    top: 145px;
+    .before-after(145px; initial; initial; 139px);
 
-    width: 67px;
-    height: 100px;
+    .size(67px; 100px);
 
     background-image: url("../img/icon-map-pin.svg");
     background-repeat: no-repeat;
@@ -67,8 +67,64 @@
     margin: 39px 30px;
     padding: 14px;
 
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: bold;
+    .font(18px; 20px; bold);
+  }
+}
+
+@media (min-width: @width-tablet) {
+  .contacts {
+    &__headline {
+      position: relative;
+
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-bottom: 30px;
+      padding-top: 30px;
+      padding-bottom: 17px;
+
+      .font(43px; 50px; bold);
+    }
+
+    &__headline::before {
+      .before-after(initial; 0; 0; initial);
+
+      .size(47px; 81px);
+
+      background-image: url("../img/icon-flag.svg");
+    }
+
+    &__address {
+      display: flex;
+
+      margin-left: 50px;
+      margin-right: 50px;
+
+      font-size: 17px;
+    }
+
+    &__tr {
+      margin-right: 55px;
+    }
+
+    &__row:nth-child(1) {
+      margin-right: 26px;
+    }
+
+    &__map {
+      .size(768px; 457px);
+
+      background-image: url("../img/map-tablet@1x.jpg");
+    }
+
+    &__map::after {
+      .before-after(145px; initial; initial; 360px);
+    }
+
+    &__button {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 35px;
+      padding-right: 35px;
+    }
   }
 }
