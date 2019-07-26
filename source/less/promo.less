@@ -1,10 +1,6 @@
 .promo {
   background-color: rgb(249, 249, 249);
 
-  &__menu {
-    display: none;
-  }
-
   &__headline {
     margin: 0;
 
@@ -96,35 +92,6 @@
 
 @media (min-width: @width-tablet) {
   .promo {
-    &__menu {
-      display: flex;
-      margin: 0;
-      padding-top: 20px;
-      padding-right: 52px;
-      padding-left: 52;
-
-      list-style: none;
-    }
-
-    &__menu-item:last-child {
-      margin-left: auto;
-    }
-
-    &__menu-link {
-      .font(15px; 24px; bold);
-
-      text-decoration: none;
-      color: #000000;
-    }
-
-    &__menu-link--desktop {
-      display: none;
-    }
-
-    &__menu-link--tablet {
-      font-weight: normal;
-    }
-
     &__br {
       display: none;
     }

@@ -1,5 +1,7 @@
 .catalog {
-  &__header {
+  &-header {
+    position: relative;
+
     background-color: #f1f1f1;
   }
 
@@ -9,5 +11,20 @@
 
     font-size: 27px;
     line-height: 30px;
+    text-align: center;
+  }
+}
+
+@media (min-width: @width-tablet) {
+  .catalog {
+    &-header::after {
+      .before-after(initial; initial; -2px; initial);
+
+      .size(100%; 24px);
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: contain;
+    }
   }
 }

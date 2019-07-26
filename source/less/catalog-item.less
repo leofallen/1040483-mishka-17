@@ -1,13 +1,19 @@
 .catalog-item {
   margin-bottom: 30px;
 
-  &__image {
+  &__image-link {
     display: block;
-    width: 260px;
-    height: 195px;
+    min-width: 260px;
+    min-height: 195px;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
   }
 
   &__description {
+    margin-top: -3px;
     padding: 28px;
     border: 1px solid @gray;
   }
@@ -52,5 +58,37 @@
   &__basket {
     margin-left: auto;
     opacity: 0.2;
+  }
+}
+
+@media (min-width: @width-tablet) {
+  .catalog-item {
+    display: flex;
+
+    &__link {
+      flex-grow: 1;
+    }
+
+    &__description {
+      flex-grow: 1;
+    }
+
+    &__headline {
+      // margin-bottom: 15px;
+
+      font-size: 20px;
+    }
+
+    &__specifications {
+      margin-bottom: 150px;
+
+      font-size: 15px;
+    }
+
+    &__price {
+      margin-top: 15px;
+
+      font-size: 17px;
+    }
   }
 }
