@@ -33,9 +33,8 @@
 
     .size(32px; 37px);
 
-    background-image: url("../img/icon-feature-flower.svg");
+    .bi("../img/icon-feature-flower.svg";);
     background-position: center;
-    background-repeat: no-repeat;
   }
 
   &__item--money::before {
@@ -43,9 +42,8 @@
 
     .size(47px; 27px);
 
-    background-image: url("../img/icon-feature-money.svg");
+    .bi("../img/icon-feature-money.svg";);
     background-position: center;
-    background-repeat: no-repeat;
   }
 
   &__item--heart::before {
@@ -53,9 +51,8 @@
 
     .size(43px; 27px);
 
-    background-image: url("../img/icon-feature-heart.svg");
+    .bi("../img/icon-feature-heart.svg";);
     background-position: center;
-    background-repeat: no-repeat;
   }
 
   &__item--knitting::before {
@@ -63,9 +60,8 @@
 
     .size(35px; 34px);
 
-    background-image: url("../img/icon-feature-ball.svg");
+    .bi("../img/icon-feature-ball.svg";);
     background-position: center;
-    background-repeat: no-repeat;
   }
 
   &__item--rocket::before {
@@ -73,9 +69,8 @@
 
     .size(55px; 23px);
 
-    background-image: url("../img/icon-feature-rocket.svg");
+    .bi("../img/icon-feature-rocket.svg";);
     background-position: center;
-    background-repeat: no-repeat;
   }
 
   &__item--gift::before {
@@ -83,9 +78,21 @@
 
     .size(33px; 32px);
 
-    background-image: url("../img/icon-feature-gift.svg");
+    .bi("../img/icon-feature-gift.svg";);
     background-position: center;
-    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 480px) {
+  .advantages {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 50%;
+    }
   }
 }
 
@@ -97,11 +104,6 @@
       margin-bottom: 40px;
 
       .font(43px; 50px);
-    }
-
-    &__list {
-      display: flex;
-      flex-wrap: wrap;
     }
 
     &__item {

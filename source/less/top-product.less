@@ -9,40 +9,36 @@
   }
 
   &__headline {
-    margin: 0;
+    .margin(0; 0; 5px; 0);
     padding: 0;
-    margin-bottom: 5px;
   }
 
   &__sub-headline {
     display: block;
-    font-size: 17px;
-    line-height: 20px;
-    font-weight: bold;
-    color: @light-green;
     margin-bottom: 30px;
+
+    .font(17px; 20px; bold);
+    color: @light-green;
   }
 
   &__description {
     display: block;
     width: 255px;
-    font-size: 15px;
-    line-height: 24px;
-    font-weight: normal;
-    color: @content-text-color;
-    margin: 0;
+    .margin(0; 0; 34px; 0);
+
     padding: 0;
-    margin-bottom: 34px;
+
+    .font(15px; 24px;);
+    color: @content-text-color;
   }
 
   &__specifications {
     list-style: none;
-    margin: 0;
+    .margin(0; 0; 28px; 0);
+
     padding: 0;
-    margin-bottom: 28px;
-    font-size: 15px;
-    line-height: 20px;
-    font-weight: normal;
+
+    .font(15px; 20px;);
     color: @content-text-color;
   }
 
@@ -60,15 +56,14 @@
     width: 100%;
     height: auto;
     min-height: 315px;
-    margin: 0 auto 29px;
+    .margin(0; auto; 29px; auto);
   }
 
   &__price {
-    font-size: 17px;
-    line-height: 24px;
-    font-weight: bold;
     margin: 0 auto;
     margin-bottom: 28px;
+
+    .font(17px; 24px; bold);
   }
 
   &__button {
@@ -94,36 +89,34 @@
     }
 
     &__headline {
-      font-size: 43px;
-      line-height: 50px;
-      margin: 0;
-      margin-bottom: 5px;
+      .font(43px; 50px; bold);
     }
 
     &__sub-headline {
-      font-size: 17px;
-      line-height: 17px;
       width: 70px;
       text-indent: 8px;
-      margin: 0 27px 0 auto;
+      .margin(0; 27px; 0; auto);
       vertical-align: middle;
+
+      .font(17px; 17px; bold);
     }
 
     &__image {
       position: absolute;
+      right: 0;
+      bottom: 0;
       z-index: -1;
+
       width: 333px;
       height: 404px;
       margin: 0;
-      right: 0;
-      bottom: 0;
     }
 
     &__description {
-      font-size: 17px;
-      line-height: 30px;
       width: 285px;
       margin-bottom: 40px;
+
+      .font(17px; 30px;);
     }
 
     &__specifications {
@@ -132,10 +125,10 @@
 
     &__price {
       display: block;
-      font-size: 20px;
+      .margin(0; auto; 34px; auto);
+
       text-align: center;
-      margin: 0 auto;
-      margin-bottom: 34px;
+      font-size: 20px;
     }
 
     &__button {

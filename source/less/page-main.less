@@ -6,12 +6,17 @@
 
 @media (min-width: @width-tablet) {
   .page-main {
+    display: flex;
+    flex-direction: column;
+
     &__menu {
       display: flex;
+      width: 70%;
       margin: 0;
+      margin-left: auto;
       padding-top: 20px;
       padding-right: 52px;
-      padding-left: 52;
+      padding-left: 52px;
 
       list-style: none;
     }
@@ -24,7 +29,7 @@
       .font(15px; 24px; bold);
 
       text-decoration: none;
-      color: #000000;
+      color: @black;
     }
 
     &__menu-link--desktop {

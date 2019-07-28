@@ -11,6 +11,10 @@
   }
 
   &__item {
+    margin: 0;
+  }
+
+  &__text {
     .margin(0; 0; 25px; 0);
 
     font-size: 15px;
@@ -89,8 +93,7 @@
 
       .size(350px; 457px);
 
-      background-image: url("../img/review@1x.jpg");
-      background-repeat: no-repeat;
+      .bi("../img/review@1x.jpg";);
     }
 
     &__headline {
@@ -99,8 +102,7 @@
       .font(43px; 50px; bold);
     }
 
-    &__switches-button:last-child,
-    &__switches {
+    &__switches-button:last-child {
       border: none;
     }
 
@@ -117,6 +119,9 @@
 
     &__item {
       order: 2;
+    }
+
+    &__text {
 
       width: 100%;
       margin-top: 40px;
@@ -133,8 +138,11 @@
       order: 4;
 
       width: 175px;
+      margin-top: -95px;
       margin-left: auto;
       padding: 19px;
+
+      border: none;
     }
   }
 }
