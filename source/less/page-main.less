@@ -11,7 +11,8 @@
 
     &__menu {
       display: flex;
-      width: 70%;
+      flex-wrap: wrap;
+      width: 43%;
       margin: 0;
       margin-left: auto;
       padding-top: 20px;
@@ -21,7 +22,7 @@
       list-style: none;
     }
 
-    &__menu-item:last-child {
+    &__menu-item {
       margin-left: auto;
     }
 
@@ -38,6 +39,35 @@
 
     &__menu-link--tablet {
       font-weight: normal;
+    }
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .page-main {
+    &__menu {
+      width: 100%;
+    }
+
+    &__menu-item {
+      flex-basis: 290px;
+      margin-left: 0;
+    }
+
+    &__menu-item:nth-child(3n+3) {
+      margin-right: 0;
+      margin-left: auto;
+      min-width: 40%;
+
+      text-align: end;
+    }
+
+    &__menu-item:last-child {
+      margin-right: 0;
+    }
+
+    &__menu-link--desktop {
+      display: block;
     }
   }
 }

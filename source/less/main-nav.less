@@ -131,3 +131,47 @@
     }
   }
 }
+
+@media (min-width: @width-desktop) {
+  .main-nav {
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+  }
+
+  .site-list {
+    &:last-child {
+      margin-left: auto;
+    }
+
+    &:first-child {
+      margin-right: auto;
+    }
+
+    &--tablet {
+      position: initial;
+
+      max-width: initial;
+    }
+
+    &__link {
+      margin: 0;
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
+    &__link--catalog {
+      padding-left: 52px;
+      padding-right: 35px;
+
+      font-size: 17px;
+    }
+
+    &__link--knitting {
+      padding-left: 35px;
+
+      font-size: 17px;
+      border-left: 1px solid @gray;
+    }
+  }
+}
