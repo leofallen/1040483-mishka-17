@@ -64,9 +64,10 @@
 @media (min-width: @width-tablet) {
   .catalog-item {
     display: flex;
+    margin-bottom: 54px;
 
-    &__link {
-      flex-grow: 1;
+    &__image-link {
+      .size(334px; 334px);
     }
 
     &__description {
@@ -91,3 +92,10 @@
     }
   }
 }
+
+// @media (min-width: @width-desktop) {
+//   .catalog-item {
+//     &__image-link {
+//     }
+//   }
+// }
