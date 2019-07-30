@@ -93,6 +93,26 @@
     &__item {
       width: 50%;
     }
+
+    &__item--knitting {
+      order: 1;
+    }
+
+    &__item--money {
+      order: 2;
+    }
+
+    &__item--rocket {
+      order: 3;
+    }
+
+    &__item--heart {
+      order: 4;
+    }
+
+    &__item--gift {
+      order: 5;
+    }
   }
 }
 
@@ -103,7 +123,7 @@
     &__headline {
       margin-bottom: 40px;
 
-      .font(43px; 50px);
+      .font(43px; 50px; bold);
     }
 
     &__item {
@@ -111,6 +131,17 @@
       margin-bottom: 55px;
 
       .font(20px; 22px; bold);
+    }
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .advantages {
+    padding-top: 70px;
+    padding-left: 225px;
+
+    &__headline {
+      .font(53px; 57px; bold);
     }
   }
 }

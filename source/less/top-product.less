@@ -138,3 +138,43 @@
     }
   }
 }
+
+
+@media (min-width: @width-desktop) {
+  .top-product {
+    position: relative;
+
+    &__headline {
+      order: 1;
+
+      .font(53px; 57px; bold);
+    }
+
+    &__sub-headline {
+      margin-left: 45px;
+      margin-right: 55px;
+    }
+
+    &__main {
+      position: initial;
+
+      margin-left: 175px;
+      padding-right: 583px;
+    }
+
+    &__image {
+      top: 0;
+      right: 50px;
+
+      .size(525px; 636px);
+    }
+
+    &__specifications {
+      margin-bottom: 111px;
+    }
+
+    &__button {
+      padding: 14px;
+    }
+  }
+}

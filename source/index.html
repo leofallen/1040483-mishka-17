@@ -8,9 +8,10 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header-logo-wrapper">
-        <img class="page-header__logo" src="./img/logo-mobile.svg" width="86" height="35" alt="лого">
-      </div>
+        <picture class="page-header-logo-wrapper">
+          <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+          <img class="page-header__logo" src="./img/logo-mobile.svg" width="86" height="35" alt="лого">
+        </picture>
       <button class="page-header__toggle">Меню</button>
       <nav class="main-nav main-nav--none">
         <ul class="main-nav__list site-list site-list--tablet">
@@ -85,7 +86,11 @@
             <span>15 см</span>
           </li>
           </ul>
-          <img class="top-product__image" width="260" height="315" src="./img/triple-set-mobile@1x.jpg"  alt="изображение продукта">
+          <picture>
+            <source media="(min-width: 375px)" srcset="./img/triple-set-tablet@1x.jpg">
+            <source media="(min-width: 1150px)" srcset="./img/triple-set-desktop@1x.jpg">
+            <img class="top-product__image" width="260" height="315" src="./img/triple-set-mobile@1x.jpg"  alt="изображение продукта">
+          </picture>
           <span class="top-product__price">Цена: 990 руб.</span>
           <a class="top-product__button button" href="#">ЗАКАЗАТЬ</a>
         </div>

@@ -3,6 +3,8 @@
 
   display: flex;
   flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
 
   &__logo {
     width: 86px;
@@ -31,17 +33,12 @@
 }
 
 .page-header-logo-wrapper {
-  margin: 22px auto;
+  .margin(21px; auto; 20px; auto);
 }
 
 @media (min-width: @width-tablet) {
   .page-header-logo-wrapper {
-    min-width: 112px;
-    min-height: 46px;
-    margin: 21px 51px;
-
-    .bi("../img/logo-tablet.svg";);
-    background-position: 0 center;
+    .margin(21px; 0; 0; 51px);
   }
 
   .page-header {
@@ -55,7 +52,8 @@
     }
 
     &__logo {
-      opacity: 0;
+      width: 112px;
+      height: 46px;
     }
 
     &__toggle {
