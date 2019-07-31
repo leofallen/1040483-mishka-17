@@ -17,6 +17,9 @@
 
 @media (min-width: @width-tablet) {
   .catalog {
+    display: flex;
+    flex-direction: column;
+
     &-header::after {
       .before-after(initial; initial; -2px; initial);
 
@@ -24,6 +27,17 @@
 
       .bi("../img/bg-zigzag-fill.svg"; repeat-x);
       background-size: contain;
+    }
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .catalog {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &-header::after {
+      height: 34px;
     }
   }
 }
