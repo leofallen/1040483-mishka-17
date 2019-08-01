@@ -1,0 +1,38 @@
+.before-after(@top: initial; @right: initial; @bottom: initial; @left: initial;) {
+  content: "";
+  position: absolute;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+}
+
+.size(@width: initial; @height: initial;) {
+  width: @width;
+  height: @height;
+}
+
+.margin(@mt: initial; @mr: initial; @mb: initial; @ml: initial;) {
+  margin-top: @mt;
+  margin-right: @mr;
+  margin-left: @ml;
+  margin-bottom: @mb;
+}
+
+.padding(@pt: initial; @pr: initial; @pb: initial; @pl: initial;) {
+  padding-top: @pt;
+  padding-right: @pr;
+  padding-bottom: @pb;
+  padding-left: @pl;
+}
+
+.font(@font-size: initial; @line-height: initial; @font-weight: normal;) {
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: @font-weight;
+}
+
+.bi(@url; @repeat: no-repeat;) {
+  background-image: url(@url);
+  background-repeat: @repeat;
+}

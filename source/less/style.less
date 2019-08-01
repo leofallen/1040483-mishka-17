@@ -1,29 +1,10 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  min-width: @width-mobile;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  font-family: "OpenSans", "Arial", sans-serif;
-}
-
-.visually-hidden {
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
-
-@import "./normalize.less";
+@import "./mixins.less";
 @import "./variables.less";
+@import "./normalize.less";
+@import "./global.less";
 @import "./page-header.less";
 @import "./main-nav.less";
+@import "./page-main.less";
 @import "./promo.less";
 @import "./top-product.less";
 @import "./button.less";

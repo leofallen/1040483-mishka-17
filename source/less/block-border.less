@@ -1,6 +1,12 @@
 .block-border {
-  width: 100%;
-  height: 9px;
-  background-image: url("../img/block-border.png");
-  background-repeat: repeat-x;
+  .size(100%; 9px);
+
+  .bi("../img/bg-zigzag-line.svg"; repeat-x);
+  background-size: contain;
+}
+
+@media (min-width: @width-tablet) {
+  .block-border {
+    height: 15px;
+  }
 }
