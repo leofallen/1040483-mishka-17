@@ -1,0 +1,29 @@
+.catalog {
+  &-header {
+    position: relative;
+
+    background-color: @bg-gray;
+  }
+
+  &__headline {
+    margin: 0;
+    padding: 75px 40px;
+
+    font-size: 27px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+@media (min-width: @width-tablet) {
+  .catalog {
+    &-header::after {
+      .before-after(initial; initial; -2px; initial);
+
+      .size(100%; 24px);
+
+      .bi("../img/bg-zigzag-fill.svg"; repeat-x);
+      background-size: contain;
+    }
+  }
+}

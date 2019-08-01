@@ -1,0 +1,41 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 31px;
+  padding-bottom: 18px;
+
+  background-color: @bg-gray;
+
+  &__logo {
+    display: none;
+  }
+
+  &__border {
+    height: 1px;
+    margin-bottom: 10px;
+
+    background-color: @gray;
+  }
+
+  &__image--margin {
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: @width-tablet) {
+  .page-footer {
+    flex-direction: row;
+    align-items: center;
+
+    padding: 50px;
+
+    &__logo {
+      display: block;
+      padding-bottom: 5px;
+    }
+
+    &__border {
+      display: none;
+    }
+  }
+}

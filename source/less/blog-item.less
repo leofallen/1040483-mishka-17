@@ -1,0 +1,49 @@
+.blog-item {
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 20px 35px;
+  }
+
+  &__headline {
+    width: 125px;
+    margin-top: 7px;
+    margin-bottom: 0;
+    margin-left: 25px;
+
+    .font(17px; 24px; bold);
+  }
+
+  &__video {
+    position: relative;
+
+    .size(260px; 150px);
+
+    .bi("../img/video-mobile@1x.jpg";);
+  }
+
+  &__video::before {
+    .before-after(37px; 80px);
+
+    display: block;
+    .size(101px; 77px);
+
+    .bi("../img/icon-play.svg";);
+    background-position: center;
+  }
+
+  &__description {
+    width: 180px;
+    margin: 30px;
+
+    .font(13px; 24px);
+  }
+
+  &__button {
+    display: block;
+    .margin(0; 30px; 33px; 30px);
+    padding: 16px;
+
+    .font(17px; 16px; bold);
+  }
+}

@@ -1,0 +1,126 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+
+  &__headline {
+    .margin(30px; 30px; 25px; 30px);
+
+    .font(18px; 30px; bold);
+  }
+
+  &__address {
+    .margin(0; 30px; 40px; 30px);
+
+    padding: 0;
+
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: normal;
+    font-style: normal;
+    color: @content-text-color;
+
+    list-style: none;
+  }
+
+  &__tr {
+    display: flex;
+    margin-bottom: 25px;
+  }
+
+  &__row:nth-child(1) {
+    margin-right: 32px;
+  }
+
+  &__email {
+    position: relative;
+
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid @light-green;
+    color: @content-text-color;
+    text-decoration: none;
+  }
+
+  &__map {
+    position: relative;
+
+    .size(100%; auto);
+    min-height: 457px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .bi("../img/map-tablet@1x.jpg");
+    background-position: center;
+  }
+
+  &__button {
+    display: block;
+    max-width: 230px;
+    margin: 39px auto;
+    padding: 14px;
+
+    .font(18px; 20px; bold);
+  }
+}
+
+@media (min-width: @width-tablet) {
+  .contacts {
+    &__headline {
+      position: relative;
+
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-bottom: 30px;
+      padding-top: 30px;
+      padding-bottom: 17px;
+
+      .font(43px; 50px; bold);
+    }
+
+    &__headline::before {
+      .before-after(initial; 0; 0; initial);
+
+      .size(47px; 81px);
+
+      background-image: url("../img/icon-flag.svg");
+    }
+
+    &__address {
+      display: flex;
+
+      margin-left: 50px;
+      margin-right: 50px;
+
+      font-size: 17px;
+    }
+
+    &__tr {
+      margin-right: 55px;
+    }
+
+    &__row {
+      max-width: 60%;
+    }
+
+    &__row:nth-child(1) {
+      margin-right: 26px;
+    }
+
+    &__row br {
+      display: none;
+    }
+
+    &__map {
+      .size(768px; 457px);
+    }
+
+    &__map::after {
+      .before-after(145px; initial; initial; 360px);
+    }
+
+    &__button {
+      padding-left: 34px;
+      padding-right: 34px;
+    }
+  }
+}
