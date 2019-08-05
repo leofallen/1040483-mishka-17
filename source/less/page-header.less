@@ -11,6 +11,10 @@
     height: 35px;
   }
 
+  &__logo-desktop {
+    display: none;
+  }
+
   &__toggle {
     position: absolute;
     top: 29px;
@@ -38,7 +42,7 @@
 
 @media (min-width: @width-tablet) {
   .page-header-logo-wrapper {
-    .margin(21px; 0; 0; 51px);
+    .margin(22px; 0; 0; 48px);
   }
 
   .page-header {
@@ -63,14 +67,14 @@
 }
 
 @media (min-width: @width-desktop) {
-  .page-header-logo-wrapper {
-    display: none;
+  .page-header {
+    &__logo-desktop {
+      display: block;
+      .margin(auto; 25px; auto; 0);
+    }
   }
 
-  .page-header-logo-desktop {
-    .size(149px; 72px);
-    .margin(7px; 0; 7px; -75px);
-
-    .bi("../img/logo-desktop.svg";);
+  .page-header-logo-wrapper {
+    display: none;
   }
 }

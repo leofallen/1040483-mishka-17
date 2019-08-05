@@ -1,19 +1,27 @@
 .social {
-  display: inline-flex;
+  display: flex;
   .margin(0; auto; 26px; auto);
   padding: 0;
 
   list-style: none;
 
+  &__item {
+    margin-left: -4px;
+  }
+
   &__item-link {
-    margin-right: 30px;
+    margin-right: 44px;
     font-size: 0;
+  }
+
+  &__item:last-child a {
+    margin-right: 0;
   }
 }
 
 @media (min-width: @width-tablet) {
   .social {
+    margin-top: 1px;
     margin-bottom: 0;
-    padding-left: 10%;
   }
 }

@@ -1,17 +1,16 @@
 .reviews {
   margin: 0;
-  padding: 30px;
+  .padding(27px; 28px; 44px; 28px);
 
   &__headline {
-    margin: 0;
-    margin-bottom: 35px;
+    margin-top: 0;
+    margin-bottom: 24px;
 
-    font-size: 25px;
-    line-height: 30px;
+    .font(25px; 30px; bold);
   }
 
   &__item {
-    margin: 0;
+    margin: 2px;
   }
 
   &__text {
@@ -25,7 +24,7 @@
 
   &__author {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 
     font-style: normal;
     font-size: 17px;
@@ -48,7 +47,7 @@
   &__switches-button {
     display: flex;
     width: 50%;
-    padding: 10px 38px;
+    padding: 12px 38px;
   }
 
   &__switches-button:last-child {
@@ -69,11 +68,6 @@
   &__button {
     display: block;
     padding: 14px;
-    margin-bottom: 15px;
-
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: bold;
   }
 }
 
@@ -85,7 +79,7 @@
     flex-wrap: wrap;
     align-items: center;
 
-    .padding(86px; 50px; 50px; 50px);
+    .padding(62px; 50px; 78px; 47px);
 
     &::before {
       .before-after(0; initial; initial; 0;);
@@ -97,6 +91,7 @@
     }
 
     &__headline {
+      margin-top: 13px;
       margin-bottom: 20px;
 
       .font(43px; 50px; bold);
@@ -114,7 +109,7 @@
       order: 1;
 
       margin-left: auto;
-      padding: 14px 35px;
+      padding: 14px 38px;
     }
 
     &__item {
@@ -124,8 +119,8 @@
     &__text {
 
       width: 100%;
-      margin-top: 40px;
-      margin-bottom: 60px;
+      margin-top: 29px;
+      margin-bottom: 54px;
 
       font-size: 17px;
     }
@@ -142,6 +137,8 @@
       margin-left: auto;
       padding: 19px;
 
+      font-size: 18px;
+      line-height: 24px;
       border: none;
     }
   }
@@ -149,15 +146,22 @@
 
 @media (min-width: @width-desktop) {
   .reviews {
-    .padding(79px; 50px; 100px; 174px);
+    .padding(61px; 50px; 122px; 172px);
     margin-left: 50px;
 
     &__headline {
+      margin-top: 9px;
+      margin-bottom: 19px;
+
       .font(53px; 57px; bold);
     }
 
     &__item {
       padding-right: 10%;
+    }
+
+    &__text {
+      margin-bottom: 36px;
     }
   }
 }

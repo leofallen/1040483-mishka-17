@@ -3,13 +3,13 @@
   flex-direction: column;
 
   &__headline {
-    .margin(30px; 30px; 25px; 30px);
+    .margin(33px; 30px; 26px; 28px);
 
     .font(18px; 30px; bold);
   }
 
   &__address {
-    .margin(0; 30px; 40px; 30px);
+    .margin(0; 30px; 37px; 30px);
 
     padding: 0;
 
@@ -24,7 +24,7 @@
 
   &__tr {
     display: flex;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 
   &__row:nth-child(1) {
@@ -34,7 +34,7 @@
   &__email {
     position: relative;
 
-    padding-bottom: 5px;
+    padding-bottom: 3px;
 
     border-bottom: 1px solid @light-green;
     color: @content-text-color;
@@ -55,11 +55,13 @@
 
   &__button {
     display: block;
-    max-width: 230px;
+    max-width: 260px;
     margin: 39px auto;
-    padding: 14px;
+    .padding(14px; 49px; 14px; 49px);
+  }
 
-    .font(18px; 20px; bold);
+  &__br-tablet {
+    display: none;
   }
 }
 
@@ -68,10 +70,10 @@
     &__headline {
       position: relative;
 
-      margin-left: 50px;
-      margin-right: 50px;
-      margin-bottom: 30px;
-      padding-top: 30px;
+      margin-left: 46px;
+      margin-right: 53px;
+      margin-bottom: 32px;
+      padding-top: 29px;
       padding-bottom: 17px;
 
       .font(43px; 50px; bold);
@@ -90,24 +92,34 @@
 
       margin-left: 50px;
       margin-right: 50px;
+      margin-bottom: 26px;
+
 
       font-size: 17px;
     }
 
     &__tr {
-      margin-right: 55px;
+      margin-right: 64px;
+    }
+
+    &__tr:last-child {
+      margin-right: 0;
     }
 
     &__row {
-      max-width: 60%;
+      max-width: 70%;
     }
 
     &__row:nth-child(1) {
       margin-right: 26px;
     }
 
-    &__row br {
+    &__br-mobile {
       display: none;
+    }
+
+    &__br-tablet {
+      display: block;
     }
 
     &__map {
@@ -119,8 +131,9 @@
     }
 
     &__button {
-      padding-left: 34px;
-      padding-right: 34px;
+      margin: 55px auto;
+      padding-left: 39px;
+      padding-right: 39px;
     }
   }
 }
@@ -131,13 +144,14 @@
 
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 80px;
+    margin-bottom: 3px;
+    padding-top: 82px;
     padding-right: 576px;
-    padding-left: 175px;
+    padding-left: 225px;
     padding-bottom: 100px;
 
     &__headline {
-      margin-left: 0;
+      margin-left: -5px;
       margin-right: 0;
 
       .font(53px; 57px; bold);
@@ -145,7 +159,8 @@
 
     &__headline::before {
       right: initial;
-      left: -111px;
+      left: -107px;
+      bottom: 2px;
     }
 
     &__address {
@@ -153,7 +168,12 @@
       flex-wrap: wrap;
     }
 
+    &__row {
+      max-width: 67%;
+    }
+
     &__button {
+      margin-top: 48px;
       margin-left: 0;
       margin-bottom: 0;
     }
@@ -162,7 +182,7 @@
       position: absolute;
       z-index: -1;
       bottom: 100px;
-      right: 50px;
+      right: 51px;
 
       .size(525px; 457px);
 

@@ -1,11 +1,11 @@
 .advantages {
-  padding: 30px;
+  .padding(25px; 28px; 28px; 28px);
 
   &__headline {
     margin: 0;
     padding-bottom: 30px;
 
-    .font(25px; 30px);
+    .font(25px; 30px; bold);
   }
 
   &__list {
@@ -18,10 +18,10 @@
   &__item {
     position: relative;
 
-    padding-top: 53px;
+    padding-top: 55px;
     margin-bottom: 28px;
 
-    .font(17px; 20px);
+    .font(17px; 20px; bold);
   }
 
   &__item:last-child {
@@ -38,7 +38,7 @@
   }
 
   &__item--money::before {
-    .before-after(0; initial; initial; 0);
+    .before-after(1px; initial; initial; 2px);
 
     .size(47px; 27px);
 
@@ -47,7 +47,7 @@
   }
 
   &__item--heart::before {
-    .before-after(0; initial; initial; 0);
+    .before-after(7px; initial; initial; 4px);
 
     .size(43px; 27px);
 
@@ -56,7 +56,7 @@
   }
 
   &__item--knitting::before {
-    .before-after(0; initial; initial; 0);
+    .before-after(4px; initial; initial; 6px);
 
     .size(35px; 34px);
 
@@ -65,7 +65,7 @@
   }
 
   &__item--rocket::before {
-    .before-after(0; initial; initial; -6px;);
+    .before-after(5px; initial; initial; -4px;);
 
     .size(55px; 23px);
 
@@ -74,7 +74,7 @@
   }
 
   &__item--gift::before {
-    .before-after(0; initial; initial; 2px);
+    .before-after(3px; initial; initial; 6px);
 
     .size(33px; 32px);
 
@@ -118,12 +118,13 @@
 
 @media (min-width: @width-tablet) {
   .advantages {
-    padding: 50px;
+    .padding(50px; 47px; 30px; 50px);
 
     &__headline {
-      margin-bottom: 40px;
+      margin-bottom: 19px;
 
       .font(43px; 50px; bold);
+      text-indent: -4px;
     }
 
     &__item {
@@ -137,11 +138,16 @@
 
 @media (min-width: @width-desktop) {
   .advantages {
-    padding-top: 70px;
+    padding-top: 60px;
     padding-left: 225px;
+    padding-bottom: 35px;
 
     &__headline {
       .font(53px; 57px; bold);
+    }
+
+    &__item {
+      width: 40%;
     }
   }
 }
