@@ -5,7 +5,7 @@
   &__header {
     display: flex;
     align-items: center;
-    padding: 20px 35px;
+    .padding(18px; 32px; 23px; 32px);
   }
 
   &__headline {
@@ -16,34 +16,41 @@
     .font(17px; 24px; bold);
   }
 
-  &__video {
+  &__video-wrapper {
     position: relative;
 
+    display: block;
+  }
+
+  &__video-wrapper::before {
+    .before-after(50%; initial; initial; 50%);
+
+    margin-top: -39px;
+    margin-left: -51px;
+
+    display: block;
+    .size(102px; 78px);
+
+    .bi("icon-play.svg";);
+    background-position: center;
+  }
+
+  &__video {
     .size(100%; auto);
     min-width: 150px;
 
     .bi("video-mobile@1x.jpg";);
   }
 
-  &__video::before {
-    .before-after(37px; 80px);
-
-    display: block;
-    .size(101px; 77px);
-
-    .bi("icon-play.svg";);
-    background-position: center;
-  }
-
   &__description {
-    padding: 34px;
+    .padding(12px; 34px; 12px; 34px);
 
     .font(13px; 24px);
   }
 
   &__button {
     display: block;
-    .margin(0; 30px; 33px; 30px);
+    .margin(0; 33px; 33px; 33px);
     padding: 16px;
 
     .font(17px; 16px; bold);
@@ -57,16 +64,18 @@
     }
 
     &__header {
-      padding: 40px;
+      .padding(29px; 36px; 30px; 36px);
     }
 
     &__headline {
+      margin-left: 27px;
+
       font-size: 20px;
     }
 
     &__description {
       margin: 0;
-      .padding(0; 40px; 40px; 40px);
+      .padding(0; 40px; 35px; 40px);
 
       .font(15px; 30px;);
     }
@@ -74,7 +83,7 @@
     &__button {
       margin-left: 40px;
       margin-right: 40px;
-      margin-bottom: 46px;
+      margin-bottom: 45px;
     }
   }
 }
@@ -88,13 +97,14 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding-top: 37px;
-      padding-bottom: 35px;
+      padding-top: 41px;
+      padding-bottom: 32px;
+      padding-left: 39px;
     }
 
     &__header-icon {
       margin-left: -3px;
-      margin-bottom: 25px;
+      margin-bottom: 23px;
     }
 
     &__headline {
@@ -107,13 +117,16 @@
     }
 
     &__button {
+      margin-right: 57px;
       margin-bottom: 60px;
     }
 
-    &__video {
+    &__video-wrapper-desktop {
       position: absolute;
-      bottom: 0;
+      bottom: -1px;
       left: 0;
+
+      overflow: hidden;
 
       .size(682px; 455px);
     }
