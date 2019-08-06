@@ -1,42 +1,11 @@
 .catalog {
   margin: 0 auto;
-
-  &-header {
-    position: relative;
-
-    background-color: @bg-gray;
-  }
-
-  &__headline {
-    margin: 0;
-    .padding(71px; 35px; 76px; 33px);
-
-    font-size: 27px;
-    line-height: 30px;
-    text-align: center;
-  }
 }
 
 @media (min-width: @width-tablet) {
   .catalog {
     display: flex;
     flex-direction: column;
-
-    &__headline {
-      padding-top: 56px;
-      padding-bottom: 90px;
-
-      .font(43px; 50px; bold);
-    }
-
-    &-header::after {
-      .before-after(initial; initial; -2px; initial);
-
-      .size(100%; 24px);
-
-      .bi("bg-zigzag-fill.svg"; repeat-x);
-      background-size: contain;
-    }
   }
 }
 
@@ -44,16 +13,5 @@
   .catalog {
     flex-direction: row;
     flex-wrap: wrap;
-
-    &__headline {
-      padding-top: 52px;
-      padding-bottom: 119px;
-
-      .font(53px; 57px; bold);
-    }
-
-    &-header::after {
-      height: 34px;
-    }
   }
 }

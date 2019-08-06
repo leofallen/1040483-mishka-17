@@ -4,6 +4,21 @@
   &__menu {
     display: none;
   }
+
+  &__header {
+    position: relative;
+
+    background-color: @bg-gray;
+  }
+
+  &__headline {
+    margin: 0;
+    .padding(71px; 35px; 76px; 33px);
+
+    font-size: 27px;
+    line-height: 30px;
+    text-align: center;
+  }
 }
 
 @media (min-width: @width-tablet) {
@@ -38,6 +53,22 @@
     &__menu-link--tablet {
       font-weight: normal;
     }
+
+    &__headline {
+      padding-top: 54px;
+      padding-bottom: 90px;
+
+      .font(43px; 50px; bold);
+    }
+
+    &__header::after {
+      .before-after(initial; initial; -2px; initial);
+
+      .size(100%; 24px);
+
+      .bi("bg-zigzag-fill.svg"; repeat-x);
+      background-size: contain;
+    }
   }
 }
 
@@ -69,6 +100,17 @@
 
     &__menu-link--desktop {
       display: block;
+    }
+
+    &__headline {
+      padding-top: 52px;
+      padding-bottom: 119px;
+
+      .font(53px; 57px; bold);
+    }
+
+    &::after {
+      height: 34px;
     }
   }
 }
