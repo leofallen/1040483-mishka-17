@@ -73,6 +73,11 @@
     border-radius: 50%;
   }
 
+  &__input-type:checked + &__radio--indicator {
+    box-shadow: inset 0 0 0 10px @white;
+    background-color: @green;
+  }
+
   &__input-color + &__checkbox-indicator {
     position: absolute;
     left: 0;
@@ -83,15 +88,25 @@
     border: 2px solid @black;
   }
 
+  &__input-color:checked + &__checkbox-indicator::before {
+    .before-after(10px; 6px; initial; initial);
+
+    .size(22px; 16px);
+
+    .bi("icon-tick.svg");
+    background-position: center;
+    background-size: contain;
+  }
+
   &__block-content--name {
     margin-bottom: 12px;
   }
 
-  &__block-content--name legend {
+  &__input-legend {
     margin-bottom: 1px;
+    padding: 0;
 
     .font(17px; 18px; bold);
-    text-indent: -3px;
   }
 
   &__block-content--name fieldset {
@@ -107,11 +122,12 @@
   }
 
   &__input {
-    width: 100%;
-    height: 52px;
+    .size(100%; 52px);
 
     border: none;
     border-bottom: 2px solid #000000;
+    background-color: rgba(0, 0, 0, 0);
+
   }
 
   &__input--name {
@@ -156,10 +172,199 @@
 
 @media (min-width: @width-tablet) {
   .form {
+    padding: 0;
+
     &__description {
-      padding: 64px 50px;
+      .padding(64px; 50px; 0; 50px);
+      margin-bottom: 22px;
 
       .font(17px; 30px);
+    }
+
+    &__block {
+      display: flex;
+    }
+
+    &__block--type {
+      .padding(49px; 50px; 0; 50px);
+    }
+
+    &__block--color {
+      .padding(66px; 26px; 0; 50px);
+    }
+
+    &__block--name {
+      .padding(51px; 50px; 15px; 50px);
+    }
+
+    &__block--contacts {
+      display: flex;
+      flex-wrap: wrap;
+      .padding(50px; 50px; 26px; 50px);
+    }
+
+    &__block--add {
+      .padding(50px; 50px; 50px; 50px);
+    }
+
+    &__add {
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    &__add::placeholder {
+      font-size: 19px;
+    }
+
+    &__block-2 {
+      background-color: @bg-gray;
+    }
+
+    &__block-title {
+      margin-right: 130px;
+    }
+
+    &__block-title--color {
+      margin-right: 124px;
+    }
+
+    &__block-title--name {
+      margin-top: 18px;
+      margin-right: 126px;
+    }
+
+    &__block-title--tel {
+      min-width: 85px;
+      margin-top: 16px;
+      margin-right: 82px;
+    }
+
+    &__block-title--email {
+      min-width: 85px;
+      margin-top: 16px;
+      margin-right: 82px;
+    }
+
+    &__block-title--add {
+      margin-bottom: 0;
+      margin-top: 16px;
+    }
+
+    &__name-content-wrapper {
+      display: flex;
+      width: 100%;
+    }
+
+    &__contacts-content-wrapper {
+      display: flex;
+      width: 100%;
+    }
+
+    &__block-content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    &__block-content--type {
+      margin-bottom: 12px;
+    }
+
+    &__input {
+      width: initial;
+    }
+
+    &__input-title {
+      font-size: 19px;
+    }
+
+    &__input-title--radio {
+      width: 100%;
+      margin-bottom: 57px;
+      padding-left: 80px;
+    }
+
+    &__input-title--checkbox {
+      width: 50%;
+      margin-bottom: 58px;
+      padding-left: 79px;
+    }
+
+    &__input-legend {
+      margin-top: 16px;
+      margin-right: 25px;
+
+      font-size: 19px;
+    }
+
+    &__input--name {
+      flex-grow: 1;
+      margin-bottom: 24px;
+    }
+
+    &__input::placeholder {
+      padding: 0 15px;
+
+      font-size: 19px;
+    }
+
+    &__input--contacts {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    &__block-content--name {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__block-content--color {
+      margin-bottom: 10px;
+    }
+
+    &__input-type + &__radio--indicator {
+      top: -16px;
+
+      .size(52px; 52px);
+    }
+
+    &__input-type:checked + &__radio--indicator {
+      box-shadow: inset 0 0 0 13px @white;
+    }
+
+    &__input-color + &__checkbox-indicator {
+      top: -15px;
+
+      .size(54px; 52px);
+    }
+
+    &__input-color:checked + &__checkbox-indicator::before {
+      top: 13px;
+      left: 7px;
+      .size(33px; 22px);
+    }
+
+    &__note-button-wrapper {
+      display: flex;
+      margin-bottom: 50px;
+      padding: 0 50px;
+    }
+
+    &__note {
+      order: 1;
+
+      margin-top: 10px;
+      margin-bottom: 0;
+
+      .font(17px; 30px);
+    }
+
+    &__button {
+      width: initial;
+      margin-right: auto;
+      padding: 14px 30px;
     }
   }
 }
