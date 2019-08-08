@@ -59,6 +59,8 @@
 
 @media (min-width: @width-tablet) {
   .blog-item {
+    border: 1px solid @gray;
+
     & picture {
       order: -1;
     }
@@ -94,7 +96,7 @@
 
 @media (min-width: @width-desktop) {
   .blog-item {
-    margin-left: 40px;
+    min-height: 455px;
     padding-left: 680px;
 
     &__header {
@@ -103,7 +105,7 @@
       align-items: flex-start;
       padding-top: 41px;
       padding-bottom: 32px;
-      padding-left: 39px;
+      padding-left: 79px;
     }
 
     &__header-icon {
@@ -117,10 +119,12 @@
     }
 
     &__description {
+      padding-left: 79px;
       padding-bottom: 45px;
     }
 
     &__button {
+      margin-left: 81px;
       margin-right: 57px;
       margin-bottom: 60px;
     }

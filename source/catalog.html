@@ -7,8 +7,8 @@
     <title>Каталог</title>
   </head>
   <body>
-    <div class="page-container">
-      <header class="page-header">
+    <header class="page-header">
+      <div class="page-wrapper page-wrapper--header">
         <div class="page-header-logo-wrapper">
           <a class="page-header__logo-link" href="./index.html">
             <picture>
@@ -39,24 +39,28 @@
             </li>
           </ul>
         </nav>
+      </div>
+    </header>
+    <main class="page-main">
+      <header class="page-main__header">
+        <div class="page-wrapper page-wrapper--page-header">
+          <ul class="page-main__menu">
+            <li class="page-main__menu-item">
+              <a class="page-main__menu-link page-main__menu-link--desktop" href="#">Новые поступления</a>
+            </li>
+            <li class="page-main__menu-item">
+              <a class="page-main__menu-link page-main__menu-link--desktop" href="#">Распродажа</a>
+            </li>
+            <li class="page-main__menu-item">
+              <a class="page-main__menu-link page-main__menu-link--tablet" href="#">Бесплатная доставка по России</a>
+            </li>
+          </ul>
+          <h1 class="page-main__headline">Каталог товаров</h1>
+        </div>
       </header>
-      <main class="page-main">
-        <header class="page-main__header">
-            <ul class="page-main__menu">
-              <li class="page-main__menu-item">
-                <a class="page-main__menu-link page-main__menu-link--desktop" href="#">Новые поступления</a>
-              </li>
-              <li class="page-main__menu-item">
-                <a class="page-main__menu-link page-main__menu-link--desktop" href="#">Распродажа</a>
-              </li>
-              <li class="page-main__menu-item">
-                <a class="page-main__menu-link page-main__menu-link--tablet" href="#">Бесплатная доставка по России</a>
-              </li>
-            </ul>
-            <h1 class="page-main__headline">Каталог товаров</h1>
-        </header>
-        <div class="catalog-content-wrapper">
-          <section class="catalog">
+      <div class="catalog-content-wrapper">
+        <section class="catalog">
+          <div class="page-wrapper page-wrapper--catalog">
             <h2 class="visually-hidden">Каталог</h2>
             <article class="catalog-item">
               <a class="catalog-item__image-link" href="#">
@@ -118,8 +122,10 @@
                 </div>
               </div>
             </article>
-          </section>
-          <section class="blog">
+          </div>
+        </section>
+        <section class="blog">
+          <div class="page-wrapper page-wrapper--blog">
             <article class="blog-item">
               <header class="blog-item__header">
                 <img class="blog-item__header-icon" src="./img/icon-video.svg" width="42" height="32" alt="иконка">
@@ -134,35 +140,37 @@
               <p class="blog-item__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
               <a class="button blog-item__button" href="#">СДЕЛАТЬ ЗАКАЗ</a>
             </article>
-          </section>
-        </div>
-      </main>
-    </div>
+          </div>
+        </section>
+      </div>
+    </main>
     <footer class="page-footer">
-      <img class="page-footer__logo" src="./img/logo-footer.svg" width="102" height="34" alt="лого">
-      <ul class="social">
-        <li class="social__item">
-          <a href="#" class="social__item-link">Инстаграм
-            <img class="page-footer__image--margin" src="./img/icon-insta.svg" width="22" height="21" alt="Инстаграм">
+      <div class="page-wrapper page-wrapper--footer">
+        <img class="page-footer__logo" src="./img/logo-footer.svg" width="102" height="34" alt="лого">
+        <ul class="social">
+          <li class="social__item">
+            <a href="#" class="social__item-link">Инстаграм
+              <img class="page-footer__image--margin" src="./img/icon-insta.svg" width="22" height="21" alt="Инстаграм">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__item-link">Фейсбук
+              <img src="./img/icon-fb.svg" width="15" height="28" alt="Фейсбук">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__item-link">Твиттер
+              <img class="page-footer__image--margin" src="./img/icon-twitter.svg" width="23" height="20" alt="Твиттер">
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__border"></div>
+        <div class="footer-link">
+          <span class="footer-link__item">Разработано</span>
+          <a href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="footer-link__logo" src="./img/logo-htmlacademy.svg" width="27" height="34" alt="лого HTML Academy">
           </a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__item-link">Фейсбук
-            <img src="./img/icon-fb.svg" width="15" height="28" alt="Фейсбук">
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__item-link">Твиттер
-            <img class="page-footer__image--margin" src="./img/icon-twitter.svg" width="23" height="20" alt="Твиттер">
-          </a>
-        </li>
-      </ul>
-      <div class="page-footer__border"></div>
-      <div class="footer-link">
-        <span class="footer-link__item">Разработано</span>
-        <a href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="footer-link__logo" src="./img/logo-htmlacademy.svg" width="27" height="34" alt="лого HTML Academy">
-        </a>
+        </div>
       </div>
     </footer>
     <script type="text/javascript" src="./js/script.js"></script>
