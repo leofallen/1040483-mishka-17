@@ -127,7 +127,6 @@
     border: none;
     border-bottom: 2px solid #000000;
     background-color: rgba(0, 0, 0, 0);
-
   }
 
   &__input--name {
@@ -167,6 +166,14 @@
   &__button {
     width: 100%;
     padding: 14px;
+  }
+}
+
+@media (min-width: 348px) {
+  .form {
+    &__input-title--radio {
+      margin-bottom: 42px;
+    }
   }
 }
 
@@ -372,5 +379,69 @@
 @media (min-width: @width-desktop) {
   .form {
     padding: 0;
+
+    &__description {
+      .padding(106px; 225px; 0; 225px);
+    }
+
+    &__block--type {
+      padding-top: 51px;
+      padding-left: 114px;
+    }
+
+    &__block--color {
+      padding-top: 65px;
+      padding-left: 110px;
+      padding-right: 19px;
+    }
+
+    &__block--name {
+      padding-top: 50px;
+      padding-left: 111px;
+      padding-right: 225px;
+    }
+
+    &__block--contacts {
+      padding-left: 112px;
+      padding-right: 225px;
+    }
+
+    &__block--add {
+      padding-left: 112px;
+      padding-right: 225px;
+      padding-bottom: 46px;
+    }
+
+    &__block-title--type {
+      margin-right: 74px;
+    }
+
+    &__block-title--color {
+      margin-right: 71px;
+    }
+
+    &__block-title--name {
+      margin-right: 73px;
+    }
+
+    &__block-title--tel {
+      margin-right: 28px;
+    }
+
+    &__block-title--email {
+      margin-right: 28px;
+    }
+
+    &__block-title--add {
+      margin-right: 74px;
+    }
+
+    &__input-title--checkbox {
+      width: 29%;
+    }
+
+    &__note-button-wrapper {
+      padding: 0 225px;
+    }
   }
 }
