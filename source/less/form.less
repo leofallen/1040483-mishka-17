@@ -9,16 +9,26 @@
   }
 
   &__block-title {
+    display: block;
+
     .font(17px; 16px; bold);
     color: @light-green;
   }
 
   &__block-title--type {
-    margin-bottom: 34px;
+    margin-bottom: 24px;
+  }
+
+  &__input-title--radio {
+    margin-bottom: 4px;
+  }
+
+  &__block--type {
+    margin-bottom: 30px;
   }
 
   &__block-title--color {
-    margin-bottom: 34px;
+    margin-bottom: 24px;
   }
 
   &__block-content {
@@ -31,7 +41,7 @@
   }
 
   &__block-content--color {
-    margin-bottom: 43px;
+    margin-bottom: 10px;
   }
 
   &__block-title--name {
@@ -49,23 +59,20 @@
   &__input-title {
     position: relative;
 
-    padding-left: 62px;
+    .padding(10px; 0; 10px; 62px);
 
     .font(17px; 18px; bold);
   }
 
-  &__input-title--radio {
-    margin-bottom: 24px;
-  }
 
   &__input-title--checkbox {
-    margin-bottom: 43px;
+    margin-bottom: 23px;
   }
 
   &__input-type + &__radio--indicator {
     position: absolute;
     left: 0;
-    top: -9px;
+    top: 0;
 
     .size(40px; 40px);
 
@@ -81,7 +88,7 @@
   &__input-color + &__checkbox-indicator {
     position: absolute;
     left: 0;
-    top: -10px;
+    top: -0;
 
     .size(40px; 39px);
 
@@ -130,7 +137,7 @@
   }
 
   &__input--name {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
 
   &__input--contacts {
@@ -172,7 +179,7 @@
 @media (min-width: 348px) {
   .form {
     &__input-title--radio {
-      margin-bottom: 42px;
+      margin-bottom: 22px;
     }
   }
 }
@@ -207,38 +214,18 @@
       font-size: 19px;
     }
 
-    &__block-2 {
+    &__block--gray {
       background-color: @bg-gray;
     }
 
     &__block-title {
-      margin-right: 130px;
+      width: 225px;
+      padding-top: 18px;
+      padding-right: 10px;
     }
 
-    &__block-title--color {
-      margin-right: 124px;
-    }
-
-    &__block-title--name {
-      margin-top: 18px;
-      margin-right: 126px;
-    }
-
-    &__block-title--tel {
-      min-width: 85px;
-      margin-top: 16px;
-      margin-right: 82px;
-    }
-
-    &__block-title--email {
-      min-width: 85px;
-      margin-top: 16px;
-      margin-right: 82px;
-    }
-
-    &__block-title--add {
-      margin-bottom: 0;
-      margin-top: 16px;
+    &__block--type {
+      margin-bottom: 15px;
     }
 
     &__name-content-wrapper {
@@ -256,6 +243,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       width: 100%;
+      margin-bottom: 25px;
     }
 
     &__block-content--type {
@@ -267,18 +255,21 @@
     }
 
     &__input-title {
+      padding-top: 15px;
+      padding-bottom: 18px;
+
       font-size: 19px;
     }
 
     &__input-title--radio {
       width: 100%;
-      margin-bottom: 57px;
+      margin-bottom: 25px;
       padding-left: 80px;
     }
 
     &__input-title--checkbox {
-      width: 50%;
-      margin-bottom: 58px;
+      flex-basis: 262px;
+      margin-bottom: 25px;
       padding-left: 79px;
     }
 
@@ -311,13 +302,7 @@
       flex-wrap: wrap;
     }
 
-    &__block-content--color {
-      margin-bottom: 10px;
-    }
-
     &__input-type + &__radio--indicator {
-      top: -16px;
-
       .size(52px; 52px);
     }
 
@@ -326,8 +311,6 @@
     }
 
     &__input-color + &__checkbox-indicator {
-      top: -15px;
-
       .size(54px; 52px);
     }
 
@@ -357,10 +340,6 @@
       margin-right: auto;
       padding: 14px 30px;
     }
-
-    .page-wrapper--note-button {
-      display: flex;
-    }
   }
 }
 
@@ -370,6 +349,10 @@
 
     &__description {
       .padding(106px; 225px; 0; 225px);
+    }
+
+    &__block-title {
+      width: 130px;
     }
 
     &__block--type {
@@ -390,34 +373,6 @@
 
     &__block--add {
       padding: 0;
-    }
-
-    &__block-title--type {
-      margin-right: 74px;
-    }
-
-    &__block-title--color {
-      margin-right: 71px;
-    }
-
-    &__block-title--name {
-      margin-right: 73px;
-    }
-
-    &__block-title--tel {
-      margin-right: 28px;
-    }
-
-    &__block-title--email {
-      margin-right: 28px;
-    }
-
-    &__block-title--add {
-      margin-right: 74px;
-    }
-
-    &__input-title--checkbox {
-      width: 29%;
     }
   }
 }
