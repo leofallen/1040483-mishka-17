@@ -1,0 +1,136 @@
+.page-wrapper--header {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @width-tablet) {
+  .page-wrapper {
+    width: 100%;
+  }
+
+  .page-wrapper--header {
+    flex-direction: row;
+  }
+
+  .page-wrapper--reviews {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .padding(62px; 50px; 77px; 47px);
+  }
+
+  .page-wrapper--reviews::before {
+    .before-after(0; initial; initial; 0;);
+    z-index: -1;
+
+    .size(350px; 457px);
+
+    .bi("review@1x.jpg";);
+  }
+
+  .page-wrapper--footer {
+    display: flex;
+    align-items: center;
+
+    padding: 50px;
+  }
+
+  .page-wrapper--form-type {
+    display: flex;
+    .padding(34px; 50px; 0; 50px);
+  }
+
+  .page-wrapper--form-color {
+    display: flex;
+    .padding(49px; 26px; 0; 50px);
+  }
+
+  .page-wrapper--form-name {
+    display: flex;
+    .padding(51px; 50px; 0; 50px);
+  }
+
+  .page-wrapper--form-add {
+    display: flex;
+    .padding(50px; 50px; 27px; 50px);
+  }
+
+  .page-wrapper--form-note-button {
+    display: flex;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .page-wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  .page-wrapper--top-product {
+    position: relative;
+    max-width: 1050px;
+  }
+
+  .page-wrapper--advantages {
+    padding-top: 60px;
+    padding-left: 225px;
+    padding-bottom: 35px;
+    padding-right: 47px;
+  }
+
+  .page-wrapper--reviews {
+    max-width: 1100px;
+
+    .padding(61px; 50px; 122px; 172px);
+  }
+
+  .page-wrapper--contacts {
+    position: relative;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 3px;
+    padding-top: 82px;
+    padding-right: 576px;
+    padding-left: 225px;
+    padding-bottom: 100px;
+  }
+
+  .page-wrapper--catalog {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .page-wrapper--blog {
+    position: relative;
+
+    max-width: 1050px;
+  }
+
+  .page-wrapper--form-type {
+    padding-left: 114px;
+  }
+
+  .page-wrapper--form-color {
+    padding-left: 110px;
+    padding-right: 19px;
+  }
+
+  .page-wrapper--form-name {
+    .padding(50px; 225px; 3px; 111px);
+  }
+
+  .page-wrapper--form-contacts {
+    .padding(50px; 225px; 26px; 112px;);
+  }
+
+  .page-wrapper--form-add {
+    .padding(50px; 225px; 20px; 112px);
+  }
+
+  .page-wrapper--form-note-button {
+    padding: 0 225px;
+  }
+}

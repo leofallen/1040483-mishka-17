@@ -1,4 +1,22 @@
 .catalog-content-wrapper {
+  display: flex;
+  flex-direction: column;
   padding: 30px;
   padding-bottom: 58px;
+}
+
+@media (min-width: @width-tablet) {
+  .catalog-content-wrapper {
+    display: block;
+    .padding(68px; 50px; 50px; 50px);
+    margin-bottom: 11px;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .catalog-content-wrapper {
+    margin-left: -51px;
+    padding-top: 112px;
+    padding-right: 0;
+  }
 }
