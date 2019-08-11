@@ -6,22 +6,23 @@
   list-style: none;
 
   &__item {
-    margin-left: -4px;
+    align-self: center;
+    margin-right: 44px;
+    // margin-left: -4px;
   }
 
   &__item-link {
-    margin-right: 44px;
+    display: block;
     font-size: 0;
   }
 
-  &__item:last-child a {
+  &__item:last-child {
     margin-right: 0;
   }
 }
 
 @media (min-width: @width-tablet) {
   .social {
-    margin-top: 1px;
     margin-bottom: 0;
   }
 }
