@@ -17,19 +17,19 @@
         <nav class="main-nav main-nav--none">
           <ul class="main-nav__list site-list site-list--tablet">
             <li class="site-list__item site-list--catalog">
-              <a class="site-list__link site-list__link--tablet site-list__link--catalog" href="./catalog.html">Каталог товаров</a>
+              <a class="site-list__link site-list__link--tablet site-list__link--catalog link-mixin" href="./catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item site-list--knitting">
-              <a class="site-list__link site-list__link--tablet site-list__link--knitting" href="./form.html">Вязание на заказ</a>
+              <a class="site-list__link site-list__link--tablet site-list__link--knitting link-mixin" href="./form.html">Вязание на заказ</a>
             </li>
           </ul>
           <img class="page-header__logo-desktop" src="./img/logo-desktop.svg" width="149" height="72" alt="лого">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list--search">
-              <a class="site-list__link site-list__link--search" href="#">Поиск по сайту</a>
+              <a class="site-list__link site-list__link--search link-mixin" href="#">Поиск по сайту</a>
             </li>
             <li class="site-list__item site-list--basket">
-              <a class="site-list__link site-list__link--basket" href="#">Корзина: пока пуста</a>
+              <a class="site-list__link site-list__link--basket link-mixin" href="#">Корзина: пока пуста</a>
             </li>
           </ul>
         </nav>
@@ -41,13 +41,13 @@
         <div class="page-wrapper page-wrapper--promo">
           <ul class="page-main__menu">
             <li class="page-main__menu-item">
-              <a class="page-main__menu-link page-main__menu-link--desktop" href="#">Новые поступления</a>
+              <a class="page-main__menu-link page-main__menu-link--desktop link-mixin" href="#">Новые поступления</a>
             </li>
             <li class="page-main__menu-item">
-              <a class="page-main__menu-link page-main__menu-link--desktop" href="#">Распродажа</a>
+              <a class="page-main__menu-link page-main__menu-link--desktop link-mixin" href="#">Распродажа</a>
             </li>
             <li class="page-main__menu-item">
-              <a class="page-main__menu-link page-main__menu-link--tablet" href="#">Бесплатная доставка по России</a>
+              <a class="page-main__menu-link page-main__menu-link--tablet link-mixin" href="#">Бесплатная доставка по России</a>
             </li>
           </ul>
           <div class="promo-headline-wrapper">
@@ -92,9 +92,9 @@
             </li>
             </ul>
             <picture>
-              <source media="(min-width: 1150px)" srcset="./img/triple-set-desktop@1x.jpg">
-              <source media="(min-width: 375px)" srcset="./img/triple-set-tablet@1x.jpg">
-              <img class="top-product__image" width="260" height="315" src="./img/triple-set-mobile@1x.jpg"  alt="изображение продукта">
+              <source media="(min-width: 1150px)" srcset="./img/triple-set-desktop@1x.jpg, ./img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 375px)" srcset="./img/triple-set-tablet@1x.jpg, ./img/triple-set-tablet@2x.jpg 2x">
+              <img class="top-product__image" width="260" height="315" src="./img/triple-set-mobile@1x.jpg" srcset="./img/triple-set-mobile@2x.jpg 2x"  alt="изображение продукта">
             </picture>
             <span class="top-product__price">Цена: 990 руб.</span>
             <a class="top-product__button button" href="#">ЗАКАЗАТЬ</a>

@@ -53,6 +53,16 @@
     background-position: center;
   }
 
+  &__map::after {
+    .before-after(50%; initial; initial; 50%);
+
+    .size(67px; 100px);
+    margin-top: -89px;
+    margin-left: -20px;
+
+    .bi("icon-map-pin.svg");
+  }
+
   &__button {
     display: block;
     max-width: 260px;
@@ -124,10 +134,6 @@
 
     &__map {
       .size(768px; 457px);
-    }
-
-    &__map::after {
-      .before-after(145px; initial; initial; 360px);
     }
 
     &__button {

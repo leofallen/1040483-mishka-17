@@ -134,6 +134,7 @@
     border: none;
     border-bottom: 2px solid #000000;
     background-color: rgba(0, 0, 0, 0);
+    outline: none;
   }
 
   &__input--name {
@@ -149,6 +150,13 @@
     padding: 16px;
 
     border: 2px solid @black;
+    outline: none;
+  }
+
+  &__add:hover,
+  &__add:active {
+    border: 2px solid @green;
+
   }
 
   &__add::placeholder {
@@ -219,7 +227,8 @@
     }
 
     &__block-title {
-      width: 225px;
+      min-width: 130px;
+      max-width: 600px;
       padding-top: 18px;
       padding-right: 10px;
     }
@@ -352,7 +361,8 @@
     }
 
     &__block-title {
-      width: 130px;
+      min-width: 115px;
+      max-width: 600px;
     }
 
     &__block--type {
