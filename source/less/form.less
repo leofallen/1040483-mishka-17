@@ -9,10 +9,19 @@
   }
 
   &__block-title {
+    position: relative;
     display: block;
 
     .font(17px; 16px; bold);
     color: @light-green;
+  }
+
+  &__block-title::after {
+    .before-after(7px; 0; initial; initial);
+
+    .size(calc(100% - 60px); 1px);
+
+    background-color: @green;
   }
 
   &__block-title--type {
@@ -64,45 +73,41 @@
     .font(17px; 18px; bold);
   }
 
-
   &__input-title--checkbox {
     margin-bottom: 23px;
   }
 
-  &__input-type + &__radio--indicator {
-    position: absolute;
-    left: 0;
-    top: 0;
+  &__input-title::before {
+    .before-after(0; initial; initial; 0);
 
     .size(40px; 40px);
 
     border: 2px solid @black;
+  }
+
+  &__input-title--radio::before {
     border-radius: 50%;
   }
 
-  &__input-type:checked + &__radio--indicator {
+  &__input-type:checked + &__input-title--radio::before {
     box-shadow: inset 0 0 0 10px @white;
     background-color: @green;
+    transition: box-shadow 0.3s;
   }
 
-  &__input-color + &__checkbox-indicator {
+  &__input-title--checkbox::after {
+    content: url("../img/icon-tick.svg");
     position: absolute;
-    left: 0;
-    top: -0;
+    top: 8px;
+    left: 4px;
+    transform: scale(0.8);
 
-    .size(40px; 39px);
-
-    border: 2px solid @black;
+    opacity: 0;
+    transition: opacity 0.2s;
   }
 
-  &__input-color:checked + &__checkbox-indicator::before {
-    .before-after(10px; 6px; initial; initial);
-
-    .size(22px; 16px);
-
-    .bi("icon-tick.svg");
-    background-position: center;
-    background-size: contain;
+  &__input-color:checked + &__input-title--checkbox::after {
+    opacity: 1;
   }
 
   &__block-content--name {
@@ -114,12 +119,6 @@
     padding: 0;
 
     .font(17px; 18px; bold);
-  }
-
-  &__block-content--name fieldset {
-    padding: 0;
-
-    border: none;
   }
 
   &__input::placeholder {
@@ -156,7 +155,6 @@
   &__add:hover,
   &__add:active {
     border: 2px solid @green;
-
   }
 
   &__add::placeholder {
@@ -213,6 +211,10 @@
       .padding(50px; 50px; 26px; 50px);
     }
 
+    &__block-title::after {
+      display: none;
+    }
+
     &__add {
       width: 100%;
       margin-bottom: 0;
@@ -227,10 +229,13 @@
     }
 
     &__block-title {
-      min-width: 130px;
-      max-width: 600px;
-      padding-top: 18px;
-      padding-right: 10px;
+      width: 210px;
+      margin-top: 12px;
+      margin-right: 10px;
+
+      line-height: 25px;
+      word-break: break-word;
+      overflow: hidden;
     }
 
     &__block--type {
@@ -250,6 +255,7 @@
     &__block-content {
       display: flex;
       flex-direction: row;
+      align-content: baseline;
       flex-wrap: wrap;
       width: 100%;
       margin-bottom: 25px;
@@ -277,7 +283,7 @@
     }
 
     &__input-title--checkbox {
-      flex-basis: 262px;
+      flex-basis: 260px;
       margin-bottom: 25px;
       padding-left: 79px;
     }
@@ -311,22 +317,19 @@
       flex-wrap: wrap;
     }
 
-    &__input-type + &__radio--indicator {
-      .size(52px; 52px);
+    &__input-title::before {
+      .size(53px; 53px);
     }
 
-    &__input-type:checked + &__radio--indicator {
+    &__input-type:checked + &__input-title--radio::before {
       box-shadow: inset 0 0 0 13px @white;
     }
 
-    &__input-color + &__checkbox-indicator {
-      .size(54px; 52px);
-    }
-
-    &__input-color:checked + &__checkbox-indicator::before {
+    &__input-title--checkbox::after {
       top: 13px;
-      left: 7px;
-      .size(33px; 22px);
+      left: 9px;
+
+      transform: scale(1);
     }
 
     &__note-button-wrapper {
@@ -361,8 +364,7 @@
     }
 
     &__block-title {
-      min-width: 115px;
-      max-width: 600px;
+      width: 118px;
     }
 
     &__block--type {
