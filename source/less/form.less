@@ -1,0 +1,388 @@
+.form {
+  .padding(22px; 30px; 55px; 30px);
+
+  &__description {
+    margin-bottom: 25px;
+
+    .font(13px; 24px);
+    color: @content-text-color;
+  }
+
+  &__block-title {
+    display: block;
+
+    .font(17px; 16px; bold);
+    color: @light-green;
+  }
+
+  &__block-title--type {
+    margin-bottom: 24px;
+  }
+
+  &__input-title--radio {
+    margin-bottom: 4px;
+  }
+
+  &__block--type {
+    margin-bottom: 30px;
+  }
+
+  &__block-title--color {
+    margin-bottom: 24px;
+  }
+
+  &__block-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__block-content--type {
+    margin-bottom: 20px;
+  }
+
+  &__block-content--color {
+    margin-bottom: 10px;
+  }
+
+  &__block-title--name {
+    margin-bottom: 30px;
+  }
+
+  &__block-title--tel {
+    margin-bottom: 6px;
+  }
+
+  &__block-title--email {
+    margin-bottom: 6px;
+  }
+
+  &__input-title {
+    position: relative;
+
+    .padding(10px; 0; 10px; 62px);
+
+    .font(17px; 18px; bold);
+  }
+
+
+  &__input-title--checkbox {
+    margin-bottom: 23px;
+  }
+
+  &__input-type + &__radio--indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    .size(40px; 40px);
+
+    border: 2px solid @black;
+    border-radius: 50%;
+  }
+
+  &__input-type:checked + &__radio--indicator {
+    box-shadow: inset 0 0 0 10px @white;
+    background-color: @green;
+  }
+
+  &__input-color + &__checkbox-indicator {
+    position: absolute;
+    left: 0;
+    top: -0;
+
+    .size(40px; 39px);
+
+    border: 2px solid @black;
+  }
+
+  &__input-color:checked + &__checkbox-indicator::before {
+    .before-after(10px; 6px; initial; initial);
+
+    .size(22px; 16px);
+
+    .bi("icon-tick.svg");
+    background-position: center;
+    background-size: contain;
+  }
+
+  &__block-content--name {
+    margin-bottom: 12px;
+  }
+
+  &__input-legend {
+    margin-bottom: 1px;
+    padding: 0;
+
+    .font(17px; 18px; bold);
+  }
+
+  &__block-content--name fieldset {
+    padding: 0;
+
+    border: none;
+  }
+
+  &__input::placeholder {
+    .font(17px; 18px);
+    color: @black;
+    opacity: 0.2;
+  }
+
+  &__input {
+    .size(100%; 52px);
+
+    border: none;
+    border-bottom: 2px solid #000000;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+  }
+
+  &__input--name {
+    margin-bottom: 21px;
+  }
+
+  &__input--contacts {
+    margin-bottom: 33px;
+  }
+
+  &__add {
+    margin-bottom: 15px;
+    padding: 16px;
+
+    border: 2px solid @black;
+    outline: none;
+  }
+
+  &__add:hover,
+  &__add:active {
+    border: 2px solid @green;
+
+  }
+
+  &__add::placeholder {
+    padding-right: 30px;
+
+    color: @black;
+    opacity: 0.2;
+  }
+
+  &__block-title--add {
+    margin-bottom: 23px;
+  }
+
+  &__note {
+    display: block;
+    margin-bottom: 31px;
+
+    .font(14px; 16px);
+    opacity: 0.5;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 14px;
+  }
+}
+
+@media (min-width: 348px) {
+  .form {
+    &__input-title--radio {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+@media (min-width: @width-tablet) {
+  .form {
+    padding: 0;
+
+    &__description {
+      .padding(64px; 50px; 0; 50px);
+      margin-bottom: 22px;
+
+      .font(17px; 30px);
+    }
+
+    &__block {
+      display: flex;
+    }
+
+    &__block--contacts {
+      display: flex;
+      flex-wrap: wrap;
+      .padding(50px; 50px; 26px; 50px);
+    }
+
+    &__add {
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    &__add::placeholder {
+      font-size: 19px;
+    }
+
+    &__block--gray {
+      background-color: @bg-gray;
+    }
+
+    &__block-title {
+      min-width: 130px;
+      max-width: 600px;
+      padding-top: 18px;
+      padding-right: 10px;
+    }
+
+    &__block--type {
+      margin-bottom: 15px;
+    }
+
+    &__name-content-wrapper {
+      display: flex;
+      width: 100%;
+    }
+
+    &__contacts-content-wrapper {
+      display: flex;
+      width: 100%;
+    }
+
+    &__block-content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    &__block-content--type {
+      margin-bottom: 12px;
+    }
+
+    &__input {
+      width: initial;
+    }
+
+    &__input-title {
+      padding-top: 15px;
+      padding-bottom: 18px;
+
+      font-size: 19px;
+    }
+
+    &__input-title--radio {
+      width: 100%;
+      margin-bottom: 25px;
+      padding-left: 80px;
+    }
+
+    &__input-title--checkbox {
+      flex-basis: 262px;
+      margin-bottom: 25px;
+      padding-left: 79px;
+    }
+
+    &__input-legend {
+      margin-top: 16px;
+      margin-right: 25px;
+
+      font-size: 19px;
+    }
+
+    &__input--name {
+      flex-grow: 1;
+      margin-bottom: 24px;
+    }
+
+    &__input::placeholder {
+      padding: 0 15px;
+
+      font-size: 19px;
+    }
+
+    &__input--contacts {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    &__block-content--name {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__input-type + &__radio--indicator {
+      .size(52px; 52px);
+    }
+
+    &__input-type:checked + &__radio--indicator {
+      box-shadow: inset 0 0 0 13px @white;
+    }
+
+    &__input-color + &__checkbox-indicator {
+      .size(54px; 52px);
+    }
+
+    &__input-color:checked + &__checkbox-indicator::before {
+      top: 13px;
+      left: 7px;
+      .size(33px; 22px);
+    }
+
+    &__note-button-wrapper {
+      display: flex;
+      margin-bottom: 50px;
+      padding: 0 50px;
+    }
+
+    &__note {
+      order: 1;
+
+      margin-top: 10px;
+      margin-bottom: 0;
+
+      .font(17px; 30px);
+    }
+
+    &__button {
+      width: initial;
+      margin-right: auto;
+      padding: 14px 30px;
+    }
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .form {
+    padding: 0;
+
+    &__description {
+      .padding(106px; 225px; 0; 225px);
+    }
+
+    &__block-title {
+      min-width: 115px;
+      max-width: 600px;
+    }
+
+    &__block--type {
+      padding: 0;
+    }
+
+    &__block--color {
+      padding: 0;
+    }
+
+    &__block--name {
+      padding: 0;
+    }
+
+    &__block--contacts {
+      padding: 0;
+    }
+
+    &__block--add {
+      padding: 0;
+    }
+  }
+}

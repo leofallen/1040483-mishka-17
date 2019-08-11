@@ -1,12 +1,19 @@
 .block-border {
   .size(100%; 9px);
 
-  .bi("../img/bg-zigzag-line.svg"; repeat-x);
+  .bi("bg-zigzag-line.svg"; repeat-x);
   background-size: contain;
+  background-position-x: 25px;
 }
 
 @media (min-width: @width-tablet) {
   .block-border {
     height: 15px;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .block-border {
+    height: 23px;
   }
 }

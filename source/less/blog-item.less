@@ -1,12 +1,14 @@
 .blog-item {
+  display: flex;
+  flex-direction: column;
+
   &__header {
     display: flex;
     align-items: center;
-    padding: 20px 35px;
+    .padding(18px; 32px; 23px; 32px);
   }
 
   &__headline {
-    width: 125px;
     margin-top: 7px;
     margin-bottom: 0;
     margin-left: 25px;
@@ -14,36 +16,127 @@
     .font(17px; 24px; bold);
   }
 
-  &__video {
+  &__video-wrapper {
     position: relative;
 
-    .size(260px; 150px);
-
-    .bi("../img/video-mobile@1x.jpg";);
+    display: block;
   }
 
-  &__video::before {
-    .before-after(37px; 80px);
+  &__video-wrapper::before {
+    .before-after(50%; initial; initial; 50%);
+
+    margin-top: -39px;
+    margin-left: -51px;
 
     display: block;
-    .size(101px; 77px);
+    .size(102px; 78px);
 
-    .bi("../img/icon-play.svg";);
+    .bi("icon-play.svg";);
     background-position: center;
   }
 
+  &__video {
+    .size(100%; auto);
+    min-width: 150px;
+
+    .bi("video-mobile@1x.jpg";);
+  }
+
   &__description {
-    width: 180px;
-    margin: 30px;
+    .padding(12px; 34px; 12px; 34px);
 
     .font(13px; 24px);
   }
 
   &__button {
     display: block;
-    .margin(0; 30px; 33px; 30px);
+    .margin(0; 33px; 33px; 33px);
     padding: 16px;
 
     .font(17px; 16px; bold);
+  }
+}
+
+@media (min-width: @width-tablet) {
+  .blog-item {
+    border: 1px solid @gray;
+
+    & picture {
+      order: -1;
+    }
+
+    &__header {
+      .padding(29px; 36px; 30px; 36px);
+    }
+
+    &__headline {
+      margin-left: 27px;
+
+      font-size: 20px;
+    }
+
+    &__description {
+      margin: 0;
+      .padding(0; 40px; 35px; 40px);
+
+      .font(15px; 30px;);
+    }
+
+    &__button {
+      margin-left: 40px;
+      margin-right: 40px;
+      margin-bottom: 45px;
+    }
+
+    &__video-container {
+      order: -1;
+    }
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .blog-item {
+    min-height: 455px;
+    padding-left: 680px;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 41px;
+      padding-bottom: 32px;
+      padding-left: 79px;
+    }
+
+    &__header-icon {
+      margin-left: -3px;
+      margin-bottom: 23px;
+    }
+
+    &__headline {
+      margin: 0;
+      .padding(0; 70px; 0; 0);
+    }
+
+    &__description {
+      padding-left: 79px;
+      padding-bottom: 45px;
+    }
+
+    &__button {
+      margin-left: 81px;
+      margin-right: 57px;
+      margin-bottom: 60px;
+    }
+
+    &__video-container {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+
+      overflow: hidden;
+
+      .size(682px; 455px);
+    }
   }
 }
