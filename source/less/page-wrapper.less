@@ -32,7 +32,12 @@
 
     .size(350px; 457px);
 
-    .bi("review@1x.jpg";);
+    .bi("review@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      .bi("review@2x.jpg");
+      background-size: 350px auto;
+    }
   }
 
   .page-wrapper--footer {
