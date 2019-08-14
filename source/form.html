@@ -10,24 +10,24 @@
     <header class="page-header">
       <div class="page-wrapper page-wrapper--header">
         <div class="page-header-logo-wrapper">
-          <a class="page-header__logo-link" href="./index.html">
+          <a class="page-header__logo-link link-mixin" href="./index.html">
             <picture>
               <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
               <img class="page-header__logo" src="./img/logo-mobile.svg" width="86" height="35" alt="лого">
             </picture>
           </a>
         </div>
-        <button class="page-header__toggle">Меню</button>
-        <nav class="main-nav main-nav--none">
+        <button class="page-header__toggle display-none">Меню</button>
+        <nav class="main-nav">
           <ul class="main-nav__list site-list site-list--tablet">
             <li class="site-list__item site-list--catalog">
-              <a class="site-list__link site-list__link--tablet site-list__link--catalog" href="./catalog.html">Каталог товаров</a>
+              <a class="site-list__link site-list__link--tablet site-list__link--catalog link-mixin" href="./catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item site-list--knitting">
-              <a class="site-list__link site-list__link--tablet site-list__link--knitting" href="./form.html">Вязание на заказ</a>
+              <a class="site-list__link site-list__link--tablet site-list__link--knitting link-mixin" href="./form.html">Вязание на заказ</a>
             </li>
           </ul>
-          <a class="page-header__logo-desktop page-header__logo-desktop-link" href="./index.html">
+          <a class="page-header__logo-desktop page-header__logo-desktop-link link-mixin" href="./index.html">
             <img src="./img/logo-desktop.svg" width="149" height="72" alt="лого">
           </a>
           <ul class="main-nav__list site-list">
@@ -46,13 +46,13 @@
         <div class="page-wrapper page-wrapper--page-header">
           <ul class="page-main__menu">
             <li class="page-main__menu-item">
-              <a class="page-main__menu-link page-main__menu-link--desktop" href="#">Новые поступления</a>
+              <a class="page-main__menu-link page-main__menu-link--desktop link-mixin" href="#">Новые поступления</a>
             </li>
             <li class="page-main__menu-item">
-              <a class="page-main__menu-link page-main__menu-link--desktop" href="#">Распродажа</a>
+              <a class="page-main__menu-link page-main__menu-link--desktop link-mixin" href="#">Распродажа</a>
             </li>
             <li class="page-main__menu-item">
-              <a class="page-main__menu-link page-main__menu-link--tablet" href="#">Бесплатная доставка по России</a>
+              <a class="page-main__menu-link page-main__menu-link--tablet link-mixin" href="#">Бесплатная доставка по России</a>
             </li>
           </ul>
           <h1 class="page-main__headline">Вязание на заказ</h1>
@@ -70,16 +70,10 @@
             <div class="page-wrapper page-wrapper--form-type">
               <span class="form__block-title form__block-title--type">ТИП</span>
               <div class="form__block-content form__block-content--type">
-                <label class="form__input-title form__input-title--radio">
-                  <input class="form__input-type visually-hidden" name="type" type="radio" checked>
-                  Аксессуар для интерьера
-                  <span class="form__radio--indicator"></span>
-                </label>
-                <label class="form__input-title form__input-title--radio">
-                  <input class="form__input-type visually-hidden" name="type" type="radio">
-                  Детская игрушка
-                  <span class="form__radio--indicator"></span>
-                </label>
+                <input class="form__input-type visually-hidden" id="accessory" name="type" type="radio" checked>
+                <label class="form__input-title form__input-title--radio" for="accessory">Аксессуар для интерьера</label>
+                <input class="form__input-type visually-hidden" id="toy" name="type" type="radio">
+                <label class="form__input-title form__input-title--radio" for="toy">Детская игрушка</label>
               </div>
             </div>
           </div>
@@ -87,36 +81,18 @@
             <div class="page-wrapper page-wrapper--form-color">
               <span class="form__block-title form__block-title--color">ЦВЕТ</span>
               <div class="form__block-content form__block-content--color">
-                <label class="form__input-title form__input-title--checkbox">
-                  <input class="form__input-color visually-hidden" name="Белый" type="checkbox" checked>
-                  Белый
-                  <span class="form__checkbox-indicator"></span>
-                </label>
-                <label class="form__input-title form__input-title--checkbox">
-                  <input class="form__input-color visually-hidden" name="Серый" type="checkbox" checked>
-                  Серый
-                  <span class="form__checkbox-indicator"></span>
-                </label>
-                <label class="form__input-title form__input-title--checkbox">
-                  <input class="form__input-color visually-hidden" name="Тиффани" type="checkbox">
-                  «Тиффани»
-                  <span class="form__checkbox-indicator"></span>
-                </label>
-                <label class="form__input-title form__input-title--checkbox">
-                  <input class="form__input-color visually-hidden" name="Черный" type="checkbox">
-                  Черный
-                  <span class="form__checkbox-indicator"></span>
-                </label>
-                <label class="form__input-title form__input-title--checkbox">
-                  <input class="form__input-color visually-hidden" name="Розовый" type="checkbox">
-                  Розовый
-                  <span class="form__checkbox-indicator"></span>
-                </label>
-                <label class="form__input-title form__input-title--checkbox">
-                  <input class="form__input-color visually-hidden" name="Оранжевый" type="checkbox">
-                  Оранжевый
-                  <span class="form__checkbox-indicator"></span>
-                </label>
+                <input class="form__input-color visually-hidden" id="white" name="Белый" type="checkbox" checked>
+                <label class="form__input-title form__input-title--checkbox" for="white">Белый</label>
+                <input class="form__input-color visually-hidden" id="gray" name="Серый" type="checkbox" checked>
+                <label class="form__input-title form__input-title--checkbox" for="gray">Серый</label>
+                <input class="form__input-color visually-hidden" id="tiffan" name="Тиффани" type="checkbox">
+                <label class="form__input-title form__input-title--checkbox" for="tiffan">«Тиффани»</label>
+                <input class="form__input-color visually-hidden" id="black" name="Черный" type="checkbox">
+                <label class="form__input-title form__input-title--checkbox" for="black">Черный</label>
+                <input class="form__input-color visually-hidden" id="pink" name="Розовый" type="checkbox">
+                <label class="form__input-title form__input-title--checkbox" for="pink">Розовый</label>
+                <input class="form__input-color visually-hidden" id="orange" name="Оранжевый" type="checkbox">
+                <label class="form__input-title form__input-title--checkbox" for="orange">Оранжевый</label>
               </div>
             </div>
           </div>
@@ -126,15 +102,15 @@
               <div class="form__block-content form__block-content--name">
                 <div class="form__name-content-wrapper">
                   <span class="form__input-legend">Имя:</span>
-                  <input class="form__input form__input--name" type="text" placeholder="Введите ваше имя*" required>
+                  <input class="form__input form__input--name input-border" type="text" placeholder="Введите ваше имя*" required>
                 </div>
                 <div class="form__name-content-wrapper">
                   <span class="form__input-legend">Фамилия:</span>
-                  <input class="form__input form__input--name" type="text" placeholder="Укажите фамилию*" required>
+                  <input class="form__input form__input--name input-border" type="text" placeholder="Укажите фамилию*" required>
                 </div>
                 <div class="form__name-content-wrapper">
                   <span class="form__input-legend">Отчество:</span>
-                  <input class="form__input form__input--name" type="text" placeholder="Отчество, если желаете">
+                  <input class="form__input form__input--name input-border" type="text" placeholder="Отчество, если желаете">
                 </div>
               </div>
             </div>
@@ -143,11 +119,11 @@
             <div class="page-wrapper page-wrapper--form-contacts">
               <div class="form__contacts-content-wrapper">
                 <span class="form__block-title form__block-title--tel">ТЕЛ</span>
-                <input class="form__input form__input--contacts" type="tel" name="tel" pattern="(\+7[0-9]{10}|8[0-9]{10})" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                <input class="form__input form__input--contacts input-border" type="tel" name="tel" pattern="(\+7[0-9]{10}|8[0-9]{10})" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
               </div>
               <div class="form__contacts-content-wrapper">
                 <span class="form__block-title form__block-title--email">E-MAIL</span>
-                <input class="form__input form__input--contacts" type="email" placeholder="Ваш Email*" required>
+                <input class="form__input form__input--contacts input-border" type="email" placeholder="Ваш Email*" required>
               </div>
             </div>
           </div>
@@ -170,29 +146,33 @@
     </main>
     <footer class="page-footer">
       <div class="page-wrapper page-wrapper--footer">
-        <img class="page-footer__logo" src="./img/logo-footer.svg" width="102" height="34" alt="лого">
-        <ul class="social">
-          <li class="social__item">
-            <a href="#" class="social__item-link">Инстаграм
-              <img class="page-footer__image--margin" src="./img/icon-insta.svg" width="22" height="21" alt="Инстаграм">
+        <div class="page-footer__logo-wrapper">
+          <a class="page-footer__link link-mixin" href="./index.html">
+            <img class="page-footer__logo" src="./img/logo-footer.svg" width="102" height="34" alt="лого">
+          </a>
+        </div>
+        <ul class="page-footer__social">
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-item-link" href="#">Инстаграм
+              <img src="./img/icon-insta.svg" width="22" height="21" alt="Инстаграм">
             </a>
           </li>
-          <li class="social__item">
-            <a href="#" class="social__item-link">Фейсбук
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-item-link" href="#">Фейсбук
               <img src="./img/icon-fb.svg" width="15" height="28" alt="Фейсбук">
             </a>
           </li>
-          <li class="social__item">
-            <a href="#" class="social__item-link">Твиттер
-              <img class="page-footer__image--margin" src="./img/icon-twitter.svg" width="23" height="20" alt="Твиттер">
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-item-link" href="#">Твиттер
+              <img src="./img/icon-twitter.svg" width="23" height="20" alt="Твиттер">
             </a>
           </li>
         </ul>
         <div class="page-footer__border"></div>
-        <div class="footer-link">
-          <span class="footer-link__item">Разработано</span>
-          <a href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="footer-link__logo" src="./img/logo-htmlacademy.svg" width="27" height="34" alt="лого HTML Academy">
+        <div class="page-footer__link-dev">
+          <span class="page-footer__link-dev-item">Разработано</span>
+          <a class="page-footer__link-dev-logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="pagefooter__link-dev-logo" src="./img/logo-htmlacademy.svg" width="27" height="34" alt="лого HTML Academy">
           </a>
         </div>
       </div>
