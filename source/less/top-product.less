@@ -1,7 +1,7 @@
 .top-product {
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  .padding(27px; 30px; 30px; 30px);
 
   &__main {
     display: flex;
@@ -9,13 +9,15 @@
   }
 
   &__headline {
-    .margin(0; 0; 5px; 0);
+    .margin(0; 0; 6px; 0);
     padding: 0;
+
+    .font(25px; 30px; bold);
   }
 
   &__sub-headline {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 22px;
 
     .font(17px; 20px; bold);
     color: @light-green;
@@ -23,8 +25,7 @@
 
   &__description {
     display: block;
-    width: 255px;
-    .margin(0; 0; 34px; 0);
+    .margin(0; 0; 18px; 0);
 
     padding: 0;
 
@@ -43,7 +44,7 @@
   }
 
   &__specifications-item {
-    padding: 9px 0;
+    .padding(9px; 0; 10px; 0);
     border-bottom: 1px solid @gray;
   }
 
@@ -56,12 +57,11 @@
     width: 100%;
     height: auto;
     min-height: 315px;
-    .margin(0; auto; 29px; auto);
+    .margin(0; auto; 21px; auto);
   }
 
   &__price {
-    margin: 0 auto;
-    margin-bottom: 28px;
+    .margin(0; auto; 26px; auto);
 
     .font(17px; 24px; bold);
   }
@@ -74,7 +74,7 @@
 
 @media (min-width: @width-tablet) {
   .top-product {
-    padding: 50px;
+    .padding(37px; 50px; 53px; 50px);
 
     &__main {
       position: relative;
@@ -85,17 +85,18 @@
     &__header {
       display: flex;
       align-items: center;
-      margin-bottom: 50px;
+      margin-bottom: 43px;
     }
 
     &__headline {
       .font(43px; 50px; bold);
+      text-indent: -3px;
     }
 
     &__sub-headline {
       width: 70px;
       text-indent: 8px;
-      .margin(0; 27px; 0; auto);
+      .margin(0; 30px; 0; auto);
       vertical-align: middle;
 
       .font(17px; 17px; bold);
@@ -113,14 +114,13 @@
     }
 
     &__description {
-      width: 285px;
-      margin-bottom: 40px;
+      margin-bottom: 36px;
 
       .font(17px; 30px;);
     }
 
     &__specifications {
-      margin-bottom: 55px;
+      margin-bottom: 56px;
     }
 
     &__price {
@@ -134,7 +134,53 @@
     &__button {
       display: block;
       margin: 0;
-      padding: 10px;
+      padding: 14px;
+    }
+  }
+}
+
+
+@media (min-width: @width-desktop) {
+  .top-product {
+    padding-top: 115px;
+    padding-bottom: 71px;
+
+
+    &__headline {
+      order: 1;
+
+      .font(53px; 57px; bold);
+    }
+
+    &__sub-headline {
+      margin-left: 46px;
+      margin-right: 57px;
+    }
+
+    &__main {
+      position: initial;
+
+      margin-left: 175px;
+      padding-right: 583px;
+    }
+
+    &__image {
+      bottom: 0;
+      right: 0;
+
+      .size(525px; 636px);
+    }
+
+    &__description {
+      margin-bottom: 48px;
+    }
+
+    &__specifications {
+      margin-bottom: 111px;
+    }
+
+    &__button {
+      padding: 14px;
     }
   }
 }

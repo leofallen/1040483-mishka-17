@@ -2,7 +2,7 @@
   background-color: rgb(249, 249, 249);
 
   &__headline {
-    margin: 0;
+    margin: 71px auto;
 
     font-size: 27px;
     line-height: 30px;
@@ -11,7 +11,7 @@
 
   &__button {
     display: block;
-    padding: 21px 25px 21px 30px;
+    .padding(16px; 25px; 19px; 29px);
 
     text-decoration: none;
     font-size: 19px;
@@ -38,21 +38,15 @@
     opacity: 0.2;
   }
 
-  &__button:hover {
-    padding-top: 16px;
-    padding-bottom: 26px;
-  }
-
-  &__button--left:hover {
-    box-shadow: -5px -5px 0 5px @light-green;
-  }
-
-  &__button--right:hover {
-    box-shadow: -5px -5px 0 5px @green;
-  }
-
   &__button-icon--left {
+    margin-top: 6px;
     margin-right: 10px;
+  }
+
+
+  &__button-icon--right {
+    margin-top: 6px;
+    margin-bottom: 2px;
   }
 }
 
@@ -63,11 +57,11 @@
 }
 
 .promo-headline-wrapper {
-  padding-top: 75px;
-  padding-bottom: 118px;
+  display: flex;
+  min-height: 283px;
 
-  .bi("../img/hero-mobile@1x.jpg";);
-  background-position: center -15px;
+  .bi("hero-mobile@1x.jpg";);
+  background-position: center -17px;
 }
 
 .promo-button-wrapper {
@@ -83,10 +77,6 @@
       display: none;
     }
   }
-
-  .promo-headline-wrapper {
-    padding-bottom: 148px;
-  }
 }
 
 @media (min-width: @width-tablet) {
@@ -96,30 +86,40 @@
     }
 
     &__headline {
+      margin-top: 112px;
+
       font-size: 43px;
       line-height: 50px;
     }
 
     &__button {
-      flex-grow: 1;
-      padding: 29px 25px 28px 30px;
+      flex-basis: 50%;
+      .padding(25px; 25px; 35px; 36px);
 
       font-size: 20px;
       line-height: 30px;
     }
+
+    &__button-icon--right {
+      margin-right: 9px;
+    }
   }
 
   .promo-headline-wrapper {
-    padding-top: 161px;
-    padding-bottom: 371px;
+    min-height: 585px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
-    background-position: center 10px;
+    background-position: center -41px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+      background-size: 1150px auto;
+    }
   }
 
   .promo-button-wrapper {
     flex-direction: row;
-    padding: 0 52px;
+    padding: 0 50px;
   }
 
   .promo::after {
@@ -127,10 +127,27 @@
     position: absolute;
     bottom: -3px;
 
-    width: 100%;
-    height: 24px;
+    .size(100%; 24px);
 
-    .bi("../img/bg-zigzag-fill.svg"; repeat-x);
+    .bi("bg-zigzag-fill.svg"; repeat-x);
     background-size: contain;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .promo {
+    &__headline {
+      .font(53px; 57px; bold);
+    }
+
+    &::after {
+      bottom: -8px;
+
+      height: 34px;
+    }
+  }
+
+  .promo-headline-wrapper {
+    background-position: center -42px;
   }
 }
