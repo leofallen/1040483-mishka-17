@@ -71,14 +71,14 @@
                 </picture>
               </a>
               <div class="catalog-item__description">
-                <a class="catalog-item__headline-link" href="#">
-                  <h2 class="catalog-item__headline">Зайчик-попрыгайчик</h2>
-                </a>
+                <h2 class="catalog-item__headline">Зайчик-попрыгайчик</h2>
                 <span class="catalog-item__specifications">Рост 30 см, вес 200 г</span>
                 <div class="catalog-item__border"></div>
                 <div class="catalog-item__price-wrapper">
                   <span class="catalog-item__price">1 200 руб.</span>
-                  <img class="catalog-item__basket" src="./img/icon-cart.svg" alt="корзина">
+                   <a class="catalog-item__basket-link pay-link" href="#">
+                     <img class="catalog-item__basket" src="./img/icon-cart.svg" alt="корзина">
+                   </a>
                 </div>
               </div>
             </article>
@@ -91,14 +91,14 @@
                 </picture>
               </a>
               <div class="catalog-item__description">
-                <a class="catalog-item__headline-link" href="#">
-                  <h2 class="catalog-item__headline">Корзинка для белья</h2>
-                </a>
+                <h2 class="catalog-item__headline">Корзинка для белья</h2>
                 <span class="catalog-item__specifications">Диаметр 15 см, высота 10 см</span>
                 <div class="catalog-item__border"></div>
                 <div class="catalog-item__price-wrapper">
                   <span class="catalog-item__price">690 руб.</span>
-                  <img class="catalog-item__basket" src="./img/icon-cart.svg" alt="корзина">
+                  <a class="catalog-item__basket-link pay-link" href="#">
+                    <img class="catalog-item__basket" src="./img/icon-cart.svg" alt="корзина">
+                  </a>
                 </div>
               </div>
             </article>
@@ -111,14 +111,14 @@
                 </picture>
               </a>
               <div class="catalog-item__description">
-                <a class="catalog-item__headline-link" href="#">
-                  <h2 class="catalog-item__headline">Большая корзинка для игрушек</h2>
-                </a>
+                <h2 class="catalog-item__headline">Большая корзинка для игрушек</h2>
                 <span class="catalog-item__specifications">Диаметр 30 см, высота 30 см</span>
                 <div class="catalog-item__border"></div>
                 <div class="catalog-item__price-wrapper">
                   <span class="catalog-item__price">1 500 руб.</span>
-                  <img class="catalog-item__basket" src="./img/icon-cart.svg" alt="корзина">
+                  <a class="catalog-item__basket-link pay-link" href="#">
+                    <img class="catalog-item__basket" src="./img/icon-cart.svg" alt="корзина">
+                  </a>
                 </div>
               </div>
             </article>
@@ -177,15 +177,16 @@
         </div>
       </div>
     </footer>
+    <div class="modal-overlay display-none"></div>
     <div class="modal display-none">
       <h2 class="modal__headline">ДОБАВИТЬ<br> В КОРЗИНУ</h2>
       <span class="modal__note">Выберите размер:</span>
       <form class="modal__form" action="#">
-        <input class="modal__input" id="s" type="checkbox">
+        <input class="modal__input" id="s" name="size" type="radio">
         <label class="modal__indicator" for="s">S</label>
-        <input class="modal__input" id="m" type="checkbox">
+        <input class="modal__input" id="m" name="size" type="radio">
         <label class="modal__indicator" for="m">M</label>
-        <input class="modal__input" id="l" type="checkbox">
+        <input class="modal__input" id="l" name="size" type="radio">
         <label class="modal__indicator" for="l">L</label>
       </form>
       <button class="modal__button button" type="submit">ДОБАВИТЬ</button>

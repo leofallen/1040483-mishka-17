@@ -90,6 +90,14 @@
   border-radius: 50%;
 }
 
+.form__input-title:hover::before {
+  border-color: @green;
+}
+
+.form__input-title:active::before {
+  border-color: @gray-2;
+}
+
 .form__input-type:checked + .form__input-title--radio::before {
   box-shadow: inset 0 0 0 10px @white;
   background-color: @green;
@@ -327,7 +335,7 @@
 
   .form__input-title--checkbox::after {
     top: 13px;
-    left: 9px;
+    left: 11px;
 
     transform: scale(1);
   }
