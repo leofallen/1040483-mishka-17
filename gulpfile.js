@@ -14,6 +14,7 @@ var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var inclide = require("posthtml-include");
+var modules = require("posthtml-modules");
 var del = require("del");
 
 gulp.task("clean", function () {
@@ -76,7 +77,7 @@ gulp.task("sprite", function () {
 gulp.task("html", function () {
   return gulp.src("source/*.html")
   .pipe(posthtml([
-    inclide()
+    modules()
   ]))
   .pipe(gulp.dest("build"))
 });
