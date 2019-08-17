@@ -78,7 +78,9 @@
                 </picture>
               </a>
               <div class="catalog-item__description">
-                <h2 class="catalog-item__headline">Зайчик-попрыгайчик</h2>
+                <a class="catalog-item__headline-link" href="#">
+                  <h2 class="catalog-item__headline">Зайчик-попрыгайчик</h2>
+                </a>
                 <span class="catalog-item__specifications">Рост 30 см, вес 200 г</span>
                 <div class="catalog-item__border"></div>
                 <div class="catalog-item__price-wrapper">
@@ -102,13 +104,15 @@
                 </picture>
               </a>
               <div class="catalog-item__description">
-                <h2 class="catalog-item__headline">Корзинка для белья</h2>
+                <a class="catalog-item__headline-link" href="">
+                  <h2 class="catalog-item__headline">Корзинка для белья</h2>
+                </a>
                 <span class="catalog-item__specifications">Диаметр 15 см, высота 10 см</span>
                 <div class="catalog-item__border"></div>
                 <div class="catalog-item__price-wrapper">
                   <span class="catalog-item__price">690 руб.</span>
                   <a class="catalog-item__basket-link pay-link" href="#">
-                    <img class="catalog-item__basket" src="./img/icon-cart.svg" alt="корзина">
+                    <svg class="catalog-item__basket" width="20" height="18"><use xlink:href="#icon-cart"></use></svg>
                   </a>
                 </div>
               </div>
@@ -126,13 +130,15 @@
                 </picture>
               </a>
               <div class="catalog-item__description">
-                <h2 class="catalog-item__headline">Большая корзинка для игрушек</h2>
+                <a class="catalog-item__headline-link" href="">
+                  <h2 class="catalog-item__headline">Большая корзинка для игрушек</h2>
+                </a>
                 <span class="catalog-item__specifications">Диаметр 30 см, высота 30 см</span>
                 <div class="catalog-item__border"></div>
                 <div class="catalog-item__price-wrapper">
                   <span class="catalog-item__price">1 500 руб.</span>
                   <a class="catalog-item__basket-link pay-link" href="#">
-                    <img class="catalog-item__basket" src="./img/icon-cart.svg" alt="корзина">
+                    <svg class="catalog-item__basket" width="20" height="18"><use xlink:href="#icon-cart"></use></svg>
                   </a>
                 </div>
               </div>
@@ -143,7 +149,7 @@
           <div class="page-wrapper page-wrapper--blog">
             <article class="blog-item">
               <header class="blog-item__header">
-                <img class="blog-item__header-icon" src="./img/icon-video.svg" width="42" height="32" alt="иконка">
+                <img class="blog-item__header-icon" src="./img/icon-video.svg" width="32" height="32" alt="иконка">
                 <h2 class="blog-item__headline">Процесс производства</h2>
               </header>
               <div class="blog-item__video-container">
@@ -162,32 +168,42 @@
     <footer class="page-footer">
       <div class="page-wrapper page-wrapper--footer">
         <div class="page-footer__logo-wrapper">
-          <a class="page-footer__link link-mixin" href="./index.html">
-            <img class="page-footer__logo" src="./img/logo-footer.svg" width="102" height="34" alt="лого">
+          <a class="page-footer__logo-link" href="./index.html">
+            <svg class="page-footer__logo-link-icon footer-link-mixin" width="102" height="34">
+              <use xlink:href="#icon-logo-footer"></use>
+            </svg>
           </a>
         </div>
         <ul class="page-footer__social">
           <li class="page-footer__social-item">
             <a class="page-footer__social-item-link" href="#">Инстаграм
-              <img src="./img/icon-insta.svg" width="22" height="21" alt="Инстаграм">
+              <svg class="page-footer__social-item-image footer-link-mixin" width="22" height="21">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
             </a>
           </li>
           <li class="page-footer__social-item">
             <a class="page-footer__social-item-link" href="#">Фейсбук
-              <img src="./img/icon-fb.svg" width="15" height="28" alt="Фейсбук">
+              <svg class="page-footer__social-item-image footer-link-mixin" width="15" height="28">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
             </a>
           </li>
           <li class="page-footer__social-item">
             <a class="page-footer__social-item-link" href="#">Твиттер
-              <img src="./img/icon-twitter.svg" width="23" height="20" alt="Твиттер">
+              <svg class="page-footer__social-item-image footer-link-mixin" width="23" height="20">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
             </a>
           </li>
         </ul>
         <div class="page-footer__border"></div>
-        <div class="page-footer__link-dev">
-          <span class="page-footer__link-dev-item">Разработано</span>
-          <a class="page-footer__link-dev-logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="pagefooter__link-dev-logo" src="./img/logo-htmlacademy.svg" width="27" height="34" alt="лого HTML Academy">
+        <div class="page-footer__dev-link">
+          <a class="page-footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="page-footer__dev-link-item">Разработано</span>
+            <svg class="page-footer__dev-link-logo" width="27" height="34">
+              <use xlink:href="#icon-logo-htmlacademy"></use>
+            </svg>
           </a>
         </div>
       </div>
