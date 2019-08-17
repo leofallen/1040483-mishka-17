@@ -8,36 +8,16 @@
   </head>
   <body>
     <div style="display: none;">
-      <include src="build/img/sprite.svg"></include>
+      <module href="build/img/sprite.svg"></module>
     </div>
-    <header class="page-header">
-      <div class="page-wrapper page-wrapper--header">
-        <picture class="page-header-logo-wrapper">
-          <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
-          <img class="page-header__logo" src="./img/logo-mobile.svg" width="86" height="35" alt="лого">
-        </picture>
-        <button class="page-header__toggle display-none">Меню</button>
-        <nav class="main-nav">
-          <ul class="main-nav__list site-list site-list--tablet">
-            <li class="site-list__item site-list--catalog">
-              <a class="site-list__link site-list__link--tablet site-list__link--catalog link-mixin" href="./catalog.html">Каталог товаров</a>
-            </li>
-            <li class="site-list__item site-list--knitting">
-              <a class="site-list__link site-list__link--tablet site-list__link--knitting link-mixin" href="./form.html">Вязание на заказ</a>
-            </li>
-          </ul>
-          <img class="page-header__logo-desktop" src="./img/logo-desktop.svg" width="149" height="72" alt="лого">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list--search">
-              <a class="site-list__link site-list__link--search link-mixin" href="#">Поиск по сайту</a>
-            </li>
-            <li class="site-list__item site-list--basket">
-              <a class="site-list__link site-list__link--basket link-mixin" href="#">Корзина: пока пуста</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+
+    <module href="source/components/header.html">
+      <picture>
+        <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+        <img class="page-header__logo" src="./img/logo-mobile.svg" width="86" height="35" alt="лого">
+      </picture>
+    </module>
+
     <main class="page-main">
       <h1 class="visually-hidden">Магазин милых вещей ручной работы "Мишка"</h1>
       <section class="promo">
