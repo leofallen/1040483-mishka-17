@@ -12,7 +12,7 @@
 
 .promo__button {
   display: block;
-  .padding(16px; 25px; 19px; 29px);
+  .padding(20px; 26px; 22px; 29px);
 
   text-decoration: none;
   font-size: 19px;
@@ -40,14 +40,7 @@
 }
 
 .promo__button-icon--left {
-  margin-top: 6px;
   margin-right: 10px;
-}
-
-
-.promo__button-icon--right {
-  margin-top: 6px;
-  margin-bottom: 2px;
 }
 
 .promo-button-content-wrapper {
@@ -99,14 +92,14 @@
 
   .promo__button {
     flex-basis: 50%;
-    .padding(25px; 25px; 35px; 36px);
+    .padding(28px; 36px; 38px; 36px);
 
     font-size: 20px;
     line-height: 30px;
   }
 
-  .promo__button-icon--right {
-    margin-right: 9px;
+  .promo__button-icon--left {
+    margin-right: 0;
   }
 
   .promo-headline-wrapper {
@@ -151,5 +144,22 @@
 
   .promo-headline-wrapper {
     background-position: center -42px;
+  }
+
+  .promo__button:hover {
+    padding-top: 23px;
+    padding-bottom: 43px;
+  }
+
+  .promo__button--left:hover {
+    box-shadow: 0 -5px 0 0 @light-green;
+  }
+
+  .promo__button--right:hover {
+    box-shadow: 0 -5px 0 0 @green;
+  }
+
+  .promo__button:active .promo-button-content-wrapper {
+    opacity: 0.3;
   }
 }

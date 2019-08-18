@@ -25,6 +25,7 @@
 
 .blog-item__video-wrapper::before {
   .before-after(50%; initial; initial; 50%);
+  z-index: 1;
 
   margin-top: -39px;
   margin-left: -51px;
@@ -34,6 +35,15 @@
 
   .bi("icon-play.svg";);
   background-position: center;
+}
+
+.blog-item__video-wrapper:hover::before {
+  transform: scale(1.2);
+}
+
+.blog-item__video-wrapper:active::before {
+  transform: scale(0.8);
+  opacity: 0.5;
 }
 
 .blog-item__video {
@@ -115,6 +125,10 @@
     padding-left: 680px;
   }
 
+  .blog-item:hover {
+    box-shadow: 0 6px 10px 0 @shadow;
+  }
+
   .blog-item__header {
     display: flex;
     flex-direction: column;
@@ -125,7 +139,6 @@
   }
 
   .blog-item__header-icon {
-    margin-left: -3px;
     margin-bottom: 23px;
   }
 
@@ -156,7 +169,7 @@
 
   .blog-item__video-container {
     position: absolute;
-    bottom: -1px;
+    top: 0;
     left: 0;
 
     overflow: hidden;

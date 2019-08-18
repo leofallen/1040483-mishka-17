@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <title>Мишка</title>
   </head>
   <body>
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <div class="page-wrapper page-wrapper--header">
         <picture class="page-header-logo-wrapper">
@@ -26,9 +29,15 @@
           <img class="page-header__logo-desktop" src="./img/logo-desktop.svg" width="149" height="72" alt="лого">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list--search">
+              <svg class="site-list__link-icon site-list__link-icon--search" width="18" height="18">
+                <use xlink:href="#icon-search"></use>
+              </svg>
               <a class="site-list__link site-list__link--search link-mixin" href="#">Поиск по сайту</a>
             </li>
             <li class="site-list__item site-list--basket">
+              <svg class="site-list__link-icon site-list__link-icon--basket" width="21" height="19">
+                <use xlink:href="#icon-cart"></use>
+              </svg>
               <a class="site-list__link site-list__link--basket link-mixin" href="#">Корзина: пока пуста</a>
             </li>
           </ul>
@@ -57,13 +66,13 @@
             <a class="promo__button promo__button--left" href="#">
               <div class="promo-button-content-wrapper">
                 <span class="promo__button-title">Предметы интерьера</span>
-                <img class="promo__button-icon promo__button-icon--left" src="./img/icon-interior.svg" width="40" height="62" alt="иконка">
+                <img class="promo__button-icon promo__button-icon--left" src="./img/button-interior.svg" width="40" height="62" alt="иконка">
               </div>
             </a>
             <a class="promo__button promo__button--right" href="#">
               <div class="promo-button-content-wrapper">
                 <span class="promo__button-title">Детские игрушки</span>
-                <img class="promo__button-icon promo__button-icon--right" src="./img/icon-toy.svg" width="60" height="60" alt="иконка">
+                <img class="promo__button-icon promo__button-icon--right" src="./img/button-toy.svg" width="60" height="60" alt="иконка">
               </div>
             </a>
           </div>
@@ -92,12 +101,16 @@
             </li>
             </ul>
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="./img/triple-set-desktop@1x.webp, ./img/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 375px)" srcset="./img/triple-set-tablet@1x.webp, ./img/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/triple-set-mobile@1x.webp, ./img/triple-set-mobile@2x.webp 2x">
+
               <source media="(min-width: 1150px)" srcset="./img/triple-set-desktop@1x.jpg, ./img/triple-set-desktop@2x.jpg 2x">
               <source media="(min-width: 375px)" srcset="./img/triple-set-tablet@1x.jpg, ./img/triple-set-tablet@2x.jpg 2x">
-              <img class="top-product__image" width="260" height="315" src="./img/triple-set-mobile@1x.jpg" srcset="./img/triple-set-mobile@2x.jpg 2x"  alt="изображение продукта">
+              <img class="top-product__image" width="260" height="315" src="./img/triple-set-mobile@1x.jpg" srcset="./img/triple-set-mobile@2x.jpg 2x" alt="изображение продукта">
             </picture>
             <span class="top-product__price">Цена: 990 руб.</span>
-            <a class="top-product__button button" href="#">ЗАКАЗАТЬ</a>
+            <a class="top-product__button button pay-link" href="#">ЗАКАЗАТЬ</a>
           </div>
         </div>
       </article>
@@ -125,10 +138,10 @@
             </cite>
           </blockquote>
           <div class="reviews__switches">
-            <a class="reviews__switches-button" href="#">
+            <a class="reviews__switches-button link-mixin" href="#">
               <img class="reviews__switches-back" src="./img/icon-left-arrow.svg" alt="назад">
             </a>
-            <a class="reviews__switches-button" href="#">
+            <a class="reviews__switches-button link-mixin" href="#">
               <img class="reviews__switches-forward" src="./img/icon-right-arrow.svg" alt="вперед">
             </a>
           </div>
@@ -163,47 +176,58 @@
     <footer class="page-footer">
       <div class="page-wrapper page-wrapper--footer">
         <div class="page-footer__logo-wrapper">
-          <img class="page-footer__logo" src="./img/logo-footer.svg" width="102" height="34" alt="лого">
+          <svg class="page-footer__logo-link-icon" width="102" height="34">
+            <use xlink:href="#icon-logo-footer"></use>
+          </svg>
         </div>
         <ul class="page-footer__social">
           <li class="page-footer__social-item">
             <a class="page-footer__social-item-link" href="#">Инстаграм
-              <img src="./img/icon-insta.svg" width="22" height="21" alt="Инстаграм">
+              <svg class="page-footer__social-item-image footer-link-mixin" width="22" height="21">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
             </a>
           </li>
           <li class="page-footer__social-item">
             <a class="page-footer__social-item-link" href="#">Фейсбук
-              <img src="./img/icon-fb.svg" width="15" height="28" alt="Фейсбук">
+              <svg class="page-footer__social-item-image footer-link-mixin" width="15" height="28">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
             </a>
           </li>
           <li class="page-footer__social-item">
             <a class="page-footer__social-item-link" href="#">Твиттер
-              <img src="./img/icon-twitter.svg" width="23" height="20" alt="Твиттер">
+              <svg class="page-footer__social-item-image footer-link-mixin" width="23" height="20">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
             </a>
           </li>
         </ul>
         <div class="page-footer__border"></div>
-        <div class="page-footer__link-dev">
-          <span class="page-footer__link-dev-item">Разработано</span>
-          <a class="page-footer__link-dev-logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="pagefooter__link-dev-logo" src="./img/logo-htmlacademy.svg" width="27" height="34" alt="лого HTML Academy">
+        <div class="page-footer__dev">
+          <a class="page-footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="page-footer__dev-link-item">Разработано</span>
+            <svg class="page-footer__dev-link-logo" width="27" height="34">
+              <use xlink:href="#icon-logo-htmlacademy"></use>
+            </svg>
           </a>
         </div>
       </div>
     </footer>
-    <div class="modal display-none">
-      <h2 class="modal__headline">ДОБАВИТЬ<br> В КОРЗИНУ</h2>
-      <span class="modal__note">Выберите размер:</span>
-      <form class="modal__form" action="#">
-        <input class="modal__input" id="s" type="checkbox">
-        <label class="modal__indicator" for="s">S</label>
-        <input class="modal__input" id="m" type="checkbox">
-        <label class="modal__indicator" for="m">M</label>
-        <input class="modal__input" id="l" type="checkbox">
-        <label class="modal__indicator" for="l">L</label>
-      </form>
-      <button class="modal__button button" type="submit">ДОБАВИТЬ</button>
-    </div>
+    <div class="modal-overlay display-none"></div>
+      <div class="modal display-none">
+        <h2 class="modal__headline">ДОБАВИТЬ<br> В КОРЗИНУ</h2>
+        <span class="modal__note">Выберите размер:</span>
+        <form class="modal__form" action="#">
+          <input class="modal__input" id="s" name="size" type="radio">
+          <label class="modal__indicator" for="s">S</label>
+          <input class="modal__input" id="m" name="size" type="radio">
+          <label class="modal__indicator" for="m">M</label>
+          <input class="modal__input" id="l" name="size" type="radio">
+          <label class="modal__indicator" for="l">L</label>
+        </form>
+        <button class="modal__button button" type="submit">ДОБАВИТЬ</button>
+      </div>
     <script type="text/javascript" src="./js/script.js"></script>
     <script type="text/javascript" src="./js/picturefill-min.js"></script>
   </body>

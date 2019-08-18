@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <title>Каталог</title>
   </head>
   <body>
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <div class="page-wrapper page-wrapper--header">
         <div class="page-header-logo-wrapper">
@@ -65,6 +68,10 @@
             <article class="catalog-item">
               <a class="catalog-item__image-link" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="./img/photo-hare-desktop@1x.webp, ./img/photo-hare-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/photo-hare-tablet@1x.webp, ./img/photo-hare-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="./img/photo-hare-mobile@1x.webp, ./img/photo-hare-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1150px)" srcset="./img/photo-hare-desktop@1x.jpg, ./img/photo-hare-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="./img/photo-hare-tablet@1x.jpg, ./img/photo-hare-tablet@2x.jpg 2x">
                   <img class="catalog-item__image" src="./img/photo-hare-mobile@1x.jpg" srcset="./img/photo-hare-mobile@1x.jpg 2x" width="260" height="195" alt="Изображение товара">
@@ -78,47 +85,61 @@
                 <div class="catalog-item__border"></div>
                 <div class="catalog-item__price-wrapper">
                   <span class="catalog-item__price">1 200 руб.</span>
-                  <img class="catalog-item__basket" src="./img/icon-cart.svg" alt="корзина">
+                  <a class="catalog-item__basket-link pay-link" href="#">
+                    <svg class="catalog-item__basket" width="20" height="18"><use xlink:href="#icon-cart"></use></svg>
+                  </a>
                 </div>
               </div>
             </article>
             <article class="catalog-item">
               <a class="catalog-item__image-link" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="./img/photo-bowl-desktop@1x.webp, ./img/photo-bowl-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/photo-bowl-tablet@1x.webp, ./img/photo-bowl-tablet@1x.webp 2x">
+                  <source type="image/webp" srcset="./img/photo-bowl-mobile@1x.webp, ./img/photo-bowl-mobile@1x.webp 2x">
+
                   <source media="(min-width: 1150px)" srcset="./img/photo-bowl-desktop@1x.jpg, ./img/photo-bowl-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="./img/photo-bowl-tablet@1x.jpg, ./img/photo-bowl-tablet@1x.jpg 2x">
                   <img class="catalog-item__image" src="./img/photo-bowl-mobile@1x.jpg" srcset="./img/photo-bowl-mobile@2x.jpg 2x" width="260" height="195" alt="Изображение товара">
                 </picture>
               </a>
               <div class="catalog-item__description">
-                <a class="catalog-item__headline-link" href="#">
+                <a class="catalog-item__headline-link" href="">
                   <h2 class="catalog-item__headline">Корзинка для белья</h2>
                 </a>
                 <span class="catalog-item__specifications">Диаметр 15 см, высота 10 см</span>
                 <div class="catalog-item__border"></div>
                 <div class="catalog-item__price-wrapper">
                   <span class="catalog-item__price">690 руб.</span>
-                  <img class="catalog-item__basket" src="./img/icon-cart.svg" alt="корзина">
+                  <a class="catalog-item__basket-link pay-link" href="#">
+                    <svg class="catalog-item__basket" width="20" height="18"><use xlink:href="#icon-cart"></use></svg>
+                  </a>
                 </div>
               </div>
             </article>
             <article class="catalog-item">
               <a class="catalog-item__image-link" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="./img/photo-toys-desktop@1x.webp, ./img/photo-toys-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/photo-toys-tablet@1x.webp, ./img/photo-toys-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="./img/photo-toys-mobile@1x.webp, ./img/photo-toys-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1150px)" srcset="./img/photo-toys-desktop@1x.jpg, ./img/photo-toys-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="./img/photo-toys-tablet@1x.jpg, ./img/photo-toys-tablet@2x.jpg 2x">
                   <img class="catalog-item__image" src="./img/photo-toys-mobile@1x.jpg" srcset="./img/photo-toys-mobile@2x.jpg 2x" width="260" height="195" alt="Изображение товара">
                 </picture>
               </a>
               <div class="catalog-item__description">
-                <a class="catalog-item__headline-link" href="#">
+                <a class="catalog-item__headline-link" href="">
                   <h2 class="catalog-item__headline">Большая корзинка для игрушек</h2>
                 </a>
                 <span class="catalog-item__specifications">Диаметр 30 см, высота 30 см</span>
                 <div class="catalog-item__border"></div>
                 <div class="catalog-item__price-wrapper">
                   <span class="catalog-item__price">1 500 руб.</span>
-                  <img class="catalog-item__basket" src="./img/icon-cart.svg" alt="корзина">
+                  <a class="catalog-item__basket-link pay-link" href="#">
+                    <svg class="catalog-item__basket" width="20" height="18"><use xlink:href="#icon-cart"></use></svg>
+                  </a>
                 </div>
               </div>
             </article>
@@ -128,7 +149,7 @@
           <div class="page-wrapper page-wrapper--blog">
             <article class="blog-item">
               <header class="blog-item__header">
-                <img class="blog-item__header-icon" src="./img/icon-video.svg" width="42" height="32" alt="иконка">
+                <img class="blog-item__header-icon" src="./img/icon-video.svg" width="32" height="32" alt="иконка">
                 <h2 class="blog-item__headline">Процесс производства</h2>
               </header>
               <div class="blog-item__video-container">
@@ -147,45 +168,56 @@
     <footer class="page-footer">
       <div class="page-wrapper page-wrapper--footer">
         <div class="page-footer__logo-wrapper">
-          <a class="page-footer__link link-mixin" href="./index.html">
-            <img class="page-footer__logo" src="./img/logo-footer.svg" width="102" height="34" alt="лого">
+          <a class="page-footer__logo-link" href="./index.html">
+            <svg class="page-footer__logo-link-icon footer-link-mixin" width="102" height="34">
+              <use xlink:href="#icon-logo-footer"></use>
+            </svg>
           </a>
         </div>
         <ul class="page-footer__social">
           <li class="page-footer__social-item">
             <a class="page-footer__social-item-link" href="#">Инстаграм
-              <img src="./img/icon-insta.svg" width="22" height="21" alt="Инстаграм">
+              <svg class="page-footer__social-item-image footer-link-mixin" width="22" height="21">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
             </a>
           </li>
           <li class="page-footer__social-item">
             <a class="page-footer__social-item-link" href="#">Фейсбук
-              <img src="./img/icon-fb.svg" width="15" height="28" alt="Фейсбук">
+              <svg class="page-footer__social-item-image footer-link-mixin" width="15" height="28">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
             </a>
           </li>
           <li class="page-footer__social-item">
             <a class="page-footer__social-item-link" href="#">Твиттер
-              <img src="./img/icon-twitter.svg" width="23" height="20" alt="Твиттер">
+              <svg class="page-footer__social-item-image footer-link-mixin" width="23" height="20">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
             </a>
           </li>
         </ul>
         <div class="page-footer__border"></div>
-        <div class="page-footer__link-dev">
-          <span class="page-footer__link-dev-item">Разработано</span>
-          <a class="page-footer__link-dev-logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="pagefooter__link-dev-logo" src="./img/logo-htmlacademy.svg" width="27" height="34" alt="лого HTML Academy">
+        <div class="page-footer__dev-link">
+          <a class="page-footer__dev-link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="page-footer__dev-link-item">Разработано</span>
+            <svg class="page-footer__dev-link-logo" width="27" height="34">
+              <use xlink:href="#icon-logo-htmlacademy"></use>
+            </svg>
           </a>
         </div>
       </div>
     </footer>
+    <div class="modal-overlay display-none"></div>
     <div class="modal display-none">
       <h2 class="modal__headline">ДОБАВИТЬ<br> В КОРЗИНУ</h2>
       <span class="modal__note">Выберите размер:</span>
       <form class="modal__form" action="#">
-        <input class="modal__input" id="s" type="checkbox">
+        <input class="modal__input" id="s" name="size" type="radio">
         <label class="modal__indicator" for="s">S</label>
-        <input class="modal__input" id="m" type="checkbox">
+        <input class="modal__input" id="m" name="size" type="radio">
         <label class="modal__indicator" for="m">M</label>
-        <input class="modal__input" id="l" type="checkbox">
+        <input class="modal__input" id="l" name="size" type="radio">
         <label class="modal__indicator" for="l">L</label>
       </form>
       <button class="modal__button button" type="submit">ДОБАВИТЬ</button>
