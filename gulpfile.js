@@ -52,7 +52,7 @@ gulp.task("imagemin", function () {
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel: 3}),
     imagemin.jpegtran({progressive: true}),
-    imagemin.mozjpeg({quality: 85}),
+    mozjpeg({quality: 85}),
     imagemin.svgo()
   ]))
   .pipe(gulp.dest("build/img"));
