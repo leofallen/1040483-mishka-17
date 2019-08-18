@@ -107,6 +107,7 @@ gulp.task("server", function () {
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/img/*.jpg", gulp.series("imagemin", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
