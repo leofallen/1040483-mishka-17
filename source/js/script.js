@@ -31,12 +31,12 @@ headerToggleOpen.addEventListener("click", function(evt) {
   mainNavMenu.classList.toggle("display-none");
 });
 
-// catalogWrapper.addEventListener("click", function(evt) { 
+// catalogWrapper.addEventListener("click", function(evt) {
 //   if (evt.target.classList.contains === "pay-link") {
-//     evt.preventDefault(); 
-//     modal.classList.toggle("display-none"); 
-//     modal.classList.toggle("modal--show"); 
-//     overlay.classList.toggle("display-none"); 
+//     evt.preventDefault();
+//     modal.classList.toggle("display-none");
+//     modal.classList.toggle("modal--show");
+//     overlay.classList.toggle("display-none");
 //   }
 // });
 
