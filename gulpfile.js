@@ -13,8 +13,9 @@ var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
-var inclide = require("posthtml-include");
+var modules = require("posthtml-modules");
 var del = require("del");
+var mozjpeg = require("imagemin-mozjpeg");
 
 gulp.task("clean", function () {
   return del("build");
@@ -23,7 +24,6 @@ gulp.task("clean", function () {
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
     "source/js/**"
   ], {
   base: "source"
@@ -52,13 +52,14 @@ gulp.task("imagemin", function () {
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel: 3}),
     imagemin.jpegtran({progressive: true}),
+    mozjpeg({quality: 85}),
     imagemin.svgo()
   ]))
-  .pipe(gulp.dest("source/img"));
+  .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("webp", function () {
-  return gulp.src("source/img/**/*.{png,jpg}")
+  return gulp.src("build/img/**/*.{png,jpg}")
   .pipe(webp({quality: 92}))
   .pipe(gulp.dest("build/img"));
 });
@@ -73,10 +74,16 @@ gulp.task("sprite", function () {
   .pipe(gulp.dest("build/img"));
 });
 
+gulp.task("imgOpt", gulp.series(
+  "imagemin",
+  "webp",
+  "sprite"
+))
+
 gulp.task("html", function () {
   return gulp.src("source/*.html")
   .pipe(posthtml([
-    inclide()
+    modules()
   ]))
   .pipe(gulp.dest("build"))
 });
@@ -85,7 +92,7 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
-  "sprite",
+  "imgOpt",
   "html"
 ));
 
@@ -100,7 +107,10 @@ gulp.task("server", function () {
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/img/*.jpg", gulp.series("imagemin", "refresh"));
+  gulp.watch("source/components/*.html", gulp.series("html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("copy", "refresh"));
 });
 
 gulp.task("refresh", function (done) {

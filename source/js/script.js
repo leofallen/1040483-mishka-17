@@ -6,6 +6,22 @@ var viewport = document.documentElement.clientWidth;
 var modal = document.querySelector(".modal");
 var overlay = document.querySelector(".modal-overlay");
 var pay = document.querySelector(".pay-link");
+var catalogWrapper = document.querySelector(".page-wrapper--catalog");
+var topProductBtn = document.querySelector(".top-product__button");
+var modalBtn = document.querySelector(".modal__button");
+
+var payClick = function(evt) {
+  evt.preventDefault();
+  modal.classList.remove("display-none");
+  modal.classList.add("modal--show");
+  overlay.classList.remove("display-none");
+};
+
+var modalClose = function(evt) {
+  modal.classList.add("display-none");
+  modal.classList.remove("modal--show");
+  overlay.classList.add("display-none");
+}
 
 if (viewport < 768) {
   mainNavMenu.classList.add("display-none");
@@ -30,24 +46,19 @@ headerToggleOpen.addEventListener("click", function(evt) {
   mainNavMenu.classList.toggle("display-none");
 });
 
-pay.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  modal.classList.toggle("display-none");
-  modal.classList.toggle("modal--show");
-  overlay.classList.toggle("display-none");
-});
-
 overlay.addEventListener("click", function(){
-  modal.classList.toggle("display-none");
-  modal.classList.toggle("modal--show");
-  overlay.classList.toggle("display-none");
+  modal.classList.add("display-none");
+  modal.classList.remove("modal--show");
+  overlay.classList.add("display-none");
 });
 
 window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    modal.classList.toggle("display-none");
-    modal.classList.toggle("modal--show");
-    overlay.classList.toggle("display-none");
+    modalClose();
   }
 });
+
+modalBtn.addEventListener("click", function(evt) {
+    modalClose()
+})

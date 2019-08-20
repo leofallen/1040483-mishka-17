@@ -66,16 +66,15 @@
 }
 
 @media (min-width: @width-desktop) {
-  .page-header__logo-desktop {
-    display: block;
-    .margin(auto; 25px; auto; 0);
-  }
-
-  .page-header__logo-desktop-link {
-    height: 72px;
+  .page-header__logo {
+    .size(149px; 72px);
   }
 
   .page-header-logo-wrapper {
-    display: none;
+    z-index: 1;
+
+    margin-top: 8px;
+    margin-right: -649px;
+    margin-left: ~"calc(50% - 75px)";
   }
 }

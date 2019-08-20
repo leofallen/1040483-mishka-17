@@ -1,0 +1,1 @@
+topProductBtn.addEventListener("click", payClick);
