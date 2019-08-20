@@ -61,16 +61,25 @@
 }
 
 .catalog-item__basket {
+  position: relative;
+  z-index: -1;
+
   margin-left: auto;
+
+  color: @black;
   opacity: 0.2;
 }
 
-.catalog-item__basket:hover {
+.catalog-item__basket-link {
+  .size(21px; 18px);
+}
+
+.catalog-item__basket-link:hover .catalog-item__basket {
   color: @light-green;
   opacity: 1;
 }
 
-.catalog-item__basket:active {
+.catalog-item__basket-link:active .catalog-item__basket {
   color: @light-green;
   opacity: 0.3;
 }
@@ -113,11 +122,18 @@
   }
 
   .catalog-item__price {
-    width: 230px;
+    width: 220px;
     margin-top: 15px;
     margin-left: 5px;
 
     font-size: 17px;
+  }
+
+  .catalog-item__basket-link {
+    width: 30px;
+    height: 24px;
+
+    text-align: end;
   }
 }
 
