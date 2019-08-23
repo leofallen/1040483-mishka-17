@@ -17,6 +17,7 @@ var modules = require("posthtml-modules");
 var del = require("del");
 var mozjpeg = require("imagemin-mozjpeg");
 var minify = require("gulp-minify");
+var htmlmin = require("gulp-htmlmin");
 
 gulp.task("clean", function () {
   return del("build");
@@ -92,6 +93,7 @@ gulp.task("html", function () {
   .pipe(posthtml([
     modules()
   ]))
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest("build"))
 });
 
