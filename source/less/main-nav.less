@@ -25,6 +25,7 @@
 
 .site-list__link {
   display: block;
+  height: 100%;
   .padding(29px; 35px; 29px; 77px);
 
   font-size: 17px;
@@ -35,11 +36,11 @@
   text-decoration: none;
 }
 
-.site-list--search {
+.site-list__item--search {
   position: relative;
 }
 
-.site-list--basket {
+.site-list__item--basket {
   position: relative;
 }
 
@@ -128,7 +129,11 @@
   }
 
   .site-list {
-    max-width: 430px;
+    max-width: 480px;
+  }
+
+  .site-list__item {
+    display: flex;
   }
 
   .site-list:last-child {
@@ -140,7 +145,7 @@
   }
 
   .site-list--tablet {
-    position: initial;
+    position: static;
   }
 
   .site-list__link {
@@ -150,6 +155,7 @@
   }
 
   .site-list__link--catalog {
+    flex-basis: 233px;
     padding-left: 49px;
     padding-right: 35px;
 
@@ -157,7 +163,9 @@
   }
 
   .site-list__link--knitting {
+    flex-basis: 233px;
     padding-left: 35px;
+    padding-right: 35px;
 
     font-size: 17px;
     border-left: 1px solid @gray;
