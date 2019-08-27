@@ -48,10 +48,14 @@
             <div class="page-wrapper page-wrapper--form-type">
               <span class="form__block-title form__block-title--type">ТИП</span>
               <div class="form__block-content form__block-content--type">
-                <input class="form__input-type visually-hidden" id="accessory" name="type" type="radio" checked>
-                <label class="form__input-title form__input-title--radio" for="accessory">Аксессуар для интерьера</label>
-                <input class="form__input-type visually-hidden" id="toy" name="type" type="radio">
-                <label class="form__input-title form__input-title--radio" for="toy">Детская игрушка</label>
+                <input class="form__input-type visually-hidden" id="accessory" name="type" type="radio" value="Аксессуар для интерьера" checked>
+                <label class="form__input-title form__input-title--radio" for="accessory">
+                  <span class="form__input-title-wrapper">Аксессуар для интерьера</span>
+                </label>
+                <input class="form__input-type visually-hidden" id="toy" name="type" type="radio" value="Детская игрушка">
+                <label class="form__input-title form__input-title--radio" for="toy">
+                  <span class="form__input-title-wrapper">Детская игрушка</span>
+                </label>
               </div>
             </div>
           </div>
@@ -59,18 +63,30 @@
             <div class="page-wrapper page-wrapper--form-color">
               <span class="form__block-title form__block-title--color">ЦВЕТ</span>
               <div class="form__block-content form__block-content--color">
-                <input class="form__input-color visually-hidden" id="white" name="Белый" type="checkbox" checked>
-                <label class="form__input-title form__input-title--checkbox" for="white">Белый</label>
-                <input class="form__input-color visually-hidden" id="gray" name="Серый" type="checkbox" checked>
-                <label class="form__input-title form__input-title--checkbox" for="gray">Серый</label>
-                <input class="form__input-color visually-hidden" id="tiffan" name="Тиффани" type="checkbox">
-                <label class="form__input-title form__input-title--checkbox" for="tiffan">«Тиффани»</label>
-                <input class="form__input-color visually-hidden" id="black" name="Черный" type="checkbox">
-                <label class="form__input-title form__input-title--checkbox" for="black">Черный</label>
-                <input class="form__input-color visually-hidden" id="pink" name="Розовый" type="checkbox">
-                <label class="form__input-title form__input-title--checkbox" for="pink">Розовый</label>
-                <input class="form__input-color visually-hidden" id="orange" name="Оранжевый" type="checkbox">
-                <label class="form__input-title form__input-title--checkbox" for="orange">Оранжевый</label>
+                <input class="form__input-color visually-hidden" id="white" name="Белый" type="checkbox" value="Белый" checked>
+                <label class="form__input-title form__input-title--checkbox" for="white">
+                  <span class="form__input-title-wrapper">Белый</span>
+                </label>
+                <input class="form__input-color visually-hidden" id="gray" name="Серый" type="checkbox" value="Серый" checked>
+                <label class="form__input-title form__input-title--checkbox" for="gray">
+                  <span class="form__input-title-wrapper">Серый</span>
+                </label>
+                <input class="form__input-color visually-hidden" id="tiffan" name="Тиффани" type="checkbox" value="Тиффани">
+                <label class="form__input-title form__input-title--checkbox" for="tiffan">
+                  <span class="form__input-title-wrapper">«Тиффани»</span>
+                </label>
+                <input class="form__input-color visually-hidden" id="black" name="Черный" type="checkbox" value="Черный">
+                <label class="form__input-title form__input-title--checkbox" for="black">
+                  <span class="form__input-title-wrapper">Черный</span>
+                </label>
+                <input class="form__input-color visually-hidden" id="pink" name="Розовый" type="checkbox" value="Розовый">
+                <label class="form__input-title form__input-title--checkbox" for="pink">
+                  <span class="form__input-title-wrapper">Розовый</span>
+                </label>
+                <input class="form__input-color visually-hidden" id="orange" name="Оранжевый" type="checkbox" value="Оранжевый">
+                <label class="form__input-title form__input-title--checkbox" for="orange">
+                  <span class="form__input-title-wrapper">Оранжевый</span>
+                </label>
               </div>
             </div>
           </div>
@@ -88,7 +104,7 @@
                 </div>
                 <div class="form__name-content-wrapper">
                   <span class="form__input-legend">Отчество:</span>
-                  <input class="form__input form__input--name input-border" type="text" placeholder="Отчество, если желаете">
+                  <input class="form__input form__input--name input-border" type="text" placeholder="Отчество, если желаете" >
                 </div>
               </div>
             </div>
