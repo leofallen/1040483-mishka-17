@@ -53,6 +53,7 @@
 
 .contacts__map {
   position: relative;
+  z-index: -1;
 
   .size(100%; auto);
   min-height: 457px;
@@ -67,6 +68,7 @@
 
 .contacts__map::after {
   .before-after(50%; initial; initial; 50%);
+  z-index: -1;
 
   .size(67px; 100px);
   margin-top: -89px;
@@ -105,7 +107,7 @@
 
     .size(47px; 81px);
 
-    background-image: url("../img/flag.svg");
+    .bi("flag.svg");
   }
 
   .contacts__address {
@@ -187,7 +189,6 @@
 
   .contacts__map {
     position: absolute;
-    z-index: -1;
     bottom: 100px;
     right: 51px;
 
