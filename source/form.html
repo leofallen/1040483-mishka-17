@@ -9,7 +9,7 @@
     </div>
     <module href="source/components/header.html">
       <div class="page-header-logo-wrapper">
-        <a class="page-header__logo-link link-mixin" href="./index.html" aria-label="переход на главную"></a>
+        <a class="page-header__logo-link link-mixin" href="./index.html" aria-label="переход на главную">
           <picture class="page-header__img-container">
             <source media="(min-width: 1150px)" srcset="./img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
@@ -131,7 +131,7 @@
             <div class="page-wrapper page-wrapper--form-add">
               <span class="form__block-title form__block-title--add">ДОП</span>
               <div class="form__block-content form__block-content--add">
-                <textarea class="form__add" name="additionally" id="" cols="30" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                <textarea class="form__add" name="additionally" cols="30" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </div>
             </div>
           </div>
@@ -146,13 +146,14 @@
     </main>
     <module href="source/components/footer.html">
       <div class="page-footer__logo-wrapper">
-        <a class="page-footer__logo-link" href="./index.html" aria-label="переход на главную"></a>
+        <a class="page-footer__logo-link" href="./index.html" aria-label="переход на главную">
           <svg class="page-footer__logo-link-icon footer-link-mixin" width="102" height="34">
             <use xlink:href="#icon-logo-footer"></use>
           </svg>
         </a>
       </div></module>
     <script type="text/javascript" src="./js/script-min.js"></script>
+    <script type="text/javascript" src="./js/header.js"></script>
     <script type="text/javascript" src="./js/picturefill-min.js"></script>
   </body>
 </html>
